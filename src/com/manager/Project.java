@@ -98,4 +98,14 @@ public class Project {
         this.employee_allocated = employee_allocated;
         this.importance = importance;
     }
+    /*
+    public int dynamic_importance(List<Project> prj){
+        Project most_imp;
+        for (int i = 0; i < prj.size();i++){
+            if (prj(i).get().deadline > prj){
+
+            }
+    }
+        return ;
+    }*/
 }
