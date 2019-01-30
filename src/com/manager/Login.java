@@ -7,8 +7,8 @@ import java.security.NoSuchAlgorithmException;
 
 public class Login extends Account{
 
-         public Login(boolean admin, String username, String password) {
-             super(admin, username, password);
+         public Login(String username, String password) {
+             super( username, password);
          }
 
         public boolean check_password(Login account, String hash) throws NoSuchAlgorithmException

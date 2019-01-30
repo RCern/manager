@@ -3,24 +3,14 @@ package com.manager;
 
 public class Account {
 
-
-    private boolean admin;
     private String username;
     private String password;
 
-    public Account(boolean admin, String username, String password) {
-        this.admin = admin;
+    public Account( String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public boolean isAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
-    }
 
     public String getUsername() {
         return username;

@@ -1,6 +1,9 @@
 package com.manager;
 
 public class Bussiness {
+    private Date date;
+    private double costs;
+    private String description;
     public Date getDate() {
         return date;
     }
@@ -25,9 +28,7 @@ public class Bussiness {
         this.description = description;
     }
 
-    private Date date;
-    private double costs;
-    private String description;
+
 
     public Bussiness(Date date, double costs, String description) {
         this.date = date;

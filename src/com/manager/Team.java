@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Team {
+    private String name;
+    private List<Integer> employees_in = new LinkedList<>();
+    private List<Integer> projects_allocated = new LinkedList<>();
+    private List<Integer> hours_per_project = new LinkedList<>();
     public Team(String name, List<Integer> employees_in, List<Integer> projects_allocated, List<Integer> hours_per_project) {
         this.name = name;
         this.employees_in = employees_in;
@@ -43,8 +47,5 @@ public class Team {
         this.hours_per_project = hours_per_project;
     }
 
-    private String name;
-    private List<Integer> employees_in = new LinkedList<>();
-    private List<Integer> projects_allocated = new LinkedList<>();
-    private List<Integer> hours_per_project = new LinkedList<>();
+
 }

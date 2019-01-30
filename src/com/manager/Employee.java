@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Employee {
+
+    private String name;
+    private boolean inhouse;
+    private List<Project> projects = new LinkedList<>();
+    private List<Team> teams = new LinkedList<>();
+    private double salary;
     public Employee(String name, boolean inhouse, List<Project> projects, List<Team> teams, double salary) {
         this.name = name;
         this.inhouse = inhouse;
@@ -52,10 +58,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    private String name;
-    private boolean inhouse;
-    private List<Project> projects = new LinkedList<>();
-    private List<Team> teams = new LinkedList<>();
-    private double salary;
+
 }
 
