@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Project {
+    private int ProjectId;
     private String name;
     private double hours_allocated;
     private Date deadline;
@@ -11,7 +12,24 @@ public class Project {
     private List<Bussiness> bussiness_trips = new LinkedList<>();
     private double costs;
     private Team team_allocated;
-    private Employee employee_allocated;
+
+    public int getProjectId() {
+        return ProjectId;
+    }
+
+    public void setProjectId(int projectId) {
+        ProjectId = projectId;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    private int priority;
 
     public String getName() {
         return name;
@@ -69,25 +87,10 @@ public class Project {
         this.team_allocated = team_allocated;
     }
 
-    public Employee getEmployee_allocated() {
-        return employee_allocated;
-    }
 
-    public void setEmployee_allocated(Employee employee_allocated) {
-        this.employee_allocated = employee_allocated;
-    }
 
-    public int getImportance() {
-        return importance;
-    }
-
-    public void setImportance(int importance) {
-        this.importance = importance;
-    }
-
-    private int importance;
-
-    public Project(String name, double hours_allocated, Date deadline, double intake, List<Bussiness> bussiness_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
+    public Project(int ProjectId, String name, double hours_allocated, Date deadline, double intake, List<Bussiness> bussiness_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
+        this.ProjectId = ProjectId;
         this.name = name;
         this.hours_allocated = hours_allocated;
         this.deadline = deadline;
@@ -95,8 +98,7 @@ public class Project {
         this.bussiness_trips = bussiness_trips;
         this.costs = costs;
         this.team_allocated = team_allocated;
-        this.employee_allocated = employee_allocated;
-        this.importance = importance;
+        this.priority = importance;
     }
     /*
     public int dynamic_importance(List<Project> prj){

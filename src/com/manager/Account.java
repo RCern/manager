@@ -3,29 +3,44 @@ package com.manager;
 
 public class Account {
 
-    private String username;
-    private String password;
+    private String Username;
+    private String Password;
 
+    public int getAccountID() {
+        return AccountID;
+    }
+
+    public void setAccountID(int accountID) {
+        AccountID = accountID;
+    }
+
+    private int AccountID;
+
+    public Account( String username, String password, int accountID) {
+        this.Username = username;
+        this.Password = password;
+        this.AccountID = accountID;
+    }
     public Account( String username, String password) {
-        this.username = username;
-        this.password = password;
+        this.Username = username;
+        this.Password = password;
     }
 
 
     public String getUsername() {
-        return username;
+        return Username;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.Username = username;
     }
 
     public String getPassword() {
-        return password;
+        return Password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.Password = password;
     }
 
 

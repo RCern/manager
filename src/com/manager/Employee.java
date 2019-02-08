@@ -5,17 +5,42 @@ import java.util.List;
 
 public class Employee {
 
+
+
+    private int EmployeeId;
     private String name;
-    private boolean inhouse;
+    private String type;
     private List<Project> projects = new LinkedList<>();
     private List<Team> teams = new LinkedList<>();
     private double salary;
-    public Employee(String name, boolean inhouse, List<Project> projects, List<Team> teams, double salary) {
+
+
+
+    private int TimeParticipation;
+    public Employee(int employeeid, String name, String type, List<Project> projects, List<Team> teams, double salary,int TimeParticipation) {
+        this.EmployeeId = employeeid;
         this.name = name;
-        this.inhouse = inhouse;
+        this.type = type;
         this.projects = projects;
         this.teams = teams;
         this.salary = salary;
+        this.TimeParticipation = TimeParticipation;
+    }
+
+    public int getEmployeeId() {
+        return EmployeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        EmployeeId = employeeId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -24,14 +49,6 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public boolean isInhouse() {
-        return inhouse;
-    }
-
-    public void setInhouse(boolean inhouse) {
-        this.inhouse = inhouse;
     }
 
     public List<Project> getProjects() {
@@ -56,6 +73,14 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public int getTimeParticipation() {
+        return TimeParticipation;
+    }
+
+    public void setTimeParticipation(int timeParticipation) {
+        TimeParticipation = timeParticipation;
     }
 
 
