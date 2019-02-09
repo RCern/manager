@@ -5,15 +5,6 @@ public class Account {
 
     private String Username;
     private String Password;
-
-    public int getAccountID() {
-        return AccountID;
-    }
-
-    public void setAccountID(int accountID) {
-        AccountID = accountID;
-    }
-
     private int AccountID;
 
     public Account( String username, String password, int accountID) {
@@ -26,6 +17,14 @@ public class Account {
         this.Password = password;
     }
 
+
+    public int getAccountID() {
+        return AccountID;
+    }
+
+    public void setAccountID(int accountID) {
+        AccountID = accountID;
+    }
 
     public String getUsername() {
         return Username;
