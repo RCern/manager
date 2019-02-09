@@ -26,14 +26,14 @@ public class Login extends Account{
     /**
      * This method verifies if the password written by the user mathces the hash saved in the database
      * @param account   Account object
-     * @param hash      Hash value of the password in the database
+     * @param inputted_username      Hash value of the password in the database
      * @return  True if the password is correct, otherwise false
      * @throws NoSuchAlgorithmException
      */
-        public boolean check_password(Login account, String hash) throws NoSuchAlgorithmException
+        private boolean check_password(Login account, String inputted_username) throws NoSuchAlgorithmException
         {
 
-            boolean matched = BCrypt.checkpw(account.getPassword(), hash);
+            boolean matched = BCrypt.checkpw(account.getPassword(), inputted_username);
 
             return matched;
         }
@@ -41,22 +41,22 @@ public class Login extends Account{
     /**
      * This method verifies if the password written by the user mathces the hash saved in the database.
      * @param account   Account object
-     * @param inputted_username Username in the database
+     * @param inputted_username Inputted username
      * @return  True if the username is correct, otherwise false
      */
-        public boolean check_username(Login account,String inputted_username){
+        private boolean check_username(Login account,String inputted_username){
             return account.getUsername().equals(inputted_username);
         }
 
     /**
      * This method verifies if the values entered are matched with the database.
      * @param account   Account object.
-     * @param input_usr Database Username
-     * @param input_pass Database Password
+     * @param input_usr Inputted Username
+     * @param input_pass Inputted Password
      * @return True if the credentials are correct, otherwise false
      */
-        public boolean allow_login(Login account, String input_usr, String input_pass){
-             if(check_username(account,input_usr) && check_username(account,input_pass)){
+        public boolean allow_login(Login account, String input_usr, String input_pass) throws NoSuchAlgorithmException {
+             if(check_username(account,input_usr) && check_password(account,input_pass)){
                  return true;
              }
              else return false;
