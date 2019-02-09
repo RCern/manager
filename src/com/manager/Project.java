@@ -9,7 +9,7 @@ public class Project {
     private double hours_allocated;
     private Date deadline;
     private double intake;
-    private List<Bussiness> bussiness_trips = new LinkedList<>();
+    private List<Business> business_trips = new LinkedList<>();
     private double costs;
     private Team team_allocated;
 
@@ -63,12 +63,12 @@ public class Project {
         this.intake = intake;
     }
 
-    public List<Bussiness> getBussiness_trips() {
-        return bussiness_trips;
+    public List<Business> getBusiness_trips() {
+        return business_trips;
     }
 
-    public void setBussiness_trips(List<Bussiness> bussiness_trips) {
-        this.bussiness_trips = bussiness_trips;
+    public void setBusiness_trips(List<Business> business_trips) {
+        this.business_trips = business_trips;
     }
 
     public double getCosts() {
@@ -89,13 +89,13 @@ public class Project {
 
 
 
-    public Project(int ProjectId, String name, double hours_allocated, Date deadline, double intake, List<Bussiness> bussiness_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
+    public Project(int ProjectId, String name, double hours_allocated, Date deadline, double intake, List<Business> business_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
         this.ProjectId = ProjectId;
         this.name = name;
         this.hours_allocated = hours_allocated;
         this.deadline = deadline;
         this.intake = intake;
-        this.bussiness_trips = bussiness_trips;
+        this.business_trips = business_trips;
         this.costs = costs;
         this.team_allocated = team_allocated;
         this.priority = importance;

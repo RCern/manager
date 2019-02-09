@@ -1,6 +1,6 @@
 package com.manager;
 
-public class Bussiness {
+public class Business {
     private Date date;
     private double costs;
     private String description;
@@ -30,7 +30,7 @@ public class Bussiness {
 
 
 
-    public Bussiness(Date date, double costs, String description) {
+    public Business(Date date, double costs, String description) {
         this.date = date;
         this.costs = costs;
         this.description = description;
