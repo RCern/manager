@@ -80,6 +80,23 @@ public class Employee {
         TimeParticipation = timeParticipation;
     }
 
+    public void addProjects(Project p){
+        projects.add(p);
+    }
+
+    public void addTeam(Team t){
+        teams.add(t);
+    }
+
+    public void removeProjects(Project p){
+        projects.remove(p.getProjectId());
+    }
+
+    public void removeTeams(Team t){
+        projects.remove(t.getID());
+    }
+
+
 
 }
 
