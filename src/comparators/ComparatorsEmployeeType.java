@@ -1,8 +1,11 @@
-package com.manager;
+package comparators;
+
+import com.manager.Employee;
 
 import java.util.Comparator;
 
-public class ComparatorsAccountUsername implements Comparator<Account> {
+public class ComparatorsEmployeeType implements Comparator<Employee> {
+
     /**
      * Compares its two arguments for order.  Returns a negative integer,
      * zero, or a positive integer as the first argument is less than, equal
@@ -44,8 +47,7 @@ public class ComparatorsAccountUsername implements Comparator<Account> {
      *                              being compared by this comparator.
      */
     @Override
-    public int compare(Account o1, Account o2) {
-
-        return (o1.getUsername().compareTo(o2.getUsername()));
+    public int compare(Employee o1, Employee o2) {
+        return o1.getType().compareTo(o2.getType());
     }
 }

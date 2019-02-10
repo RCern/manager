@@ -4,9 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Employee {
-
-
-
     private int EmployeeId;
     private String name;
     private String type;

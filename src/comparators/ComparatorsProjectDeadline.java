@@ -1,8 +1,10 @@
-package com.manager;
+package comparators;
+
+import com.manager.Project;
 
 import java.util.Comparator;
 
-public class ComparatorsAccountPassword implements Comparator<Account> {
+public class ComparatorsProjectDeadline implements Comparator<Project> {
     /**
      * Compares its two arguments for order.  Returns a negative integer,
      * zero, or a positive integer as the first argument is less than, equal
@@ -44,8 +46,7 @@ public class ComparatorsAccountPassword implements Comparator<Account> {
      *                              being compared by this comparator.
      */
     @Override
-    public int compare(Account o1, Account o2) {
-
-        return (o1.getPassword().compareTo(o2.getPassword()));
+    public int compare(Project o1, Project o2) {
+        return o1.getDeadline().compareTo(o2.getDeadline());
     }
 }

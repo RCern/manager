@@ -1,5 +1,7 @@
 package com.manager;
 
+import java.util.Calendar;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ public class Project {
     private int ProjectId;
     private String name;
     private double hours_allocated;
-    private Date deadline;
+    private Calendar deadline;
     private double intake;
     private List<Business> business_trips = new LinkedList<>();
     private double costs;
@@ -47,11 +49,11 @@ public class Project {
         this.hours_allocated = hours_allocated;
     }
 
-    public Date getDeadline() {
+    public Calendar getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(Calendar deadline) {
         this.deadline = deadline;
     }
 
@@ -89,7 +91,7 @@ public class Project {
 
 
 
-    public Project(int ProjectId, String name, double hours_allocated, Date deadline, double intake, List<Business> business_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
+    public Project(int ProjectId, String name, double hours_allocated, Calendar deadline, double intake, List<Business> business_trips, double costs, Team team_allocated, Employee employee_allocated, int importance) {
         this.ProjectId = ProjectId;
         this.name = name;
         this.hours_allocated = hours_allocated;

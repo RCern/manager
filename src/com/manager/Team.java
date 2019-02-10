@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Team {
+    private int ID;
     private String name;
     private List<Integer> employees_in = new LinkedList<>();
     private List<Integer> projects_allocated = new LinkedList<>();
@@ -48,4 +49,11 @@ public class Team {
     }
 
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 }

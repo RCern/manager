@@ -1,14 +1,16 @@
 package com.manager;
 
+import java.util.Calendar;
+
 public class Business {
-    private Date date;
+    private Calendar date;
     private double costs;
     private String description;
-    public Date getDate() {
+    public Calendar getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Calendar date) {
         this.date = date;
     }
 
@@ -30,7 +32,7 @@ public class Business {
 
 
 
-    public Business(Date date, double costs, String description) {
+    public Business(Calendar date, double costs, String description) {
         this.date = date;
         this.costs = costs;
         this.description = description;
