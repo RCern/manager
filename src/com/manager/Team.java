@@ -1,19 +1,15 @@
 package com.manager;
 
-import comparators.ComparatorsEmployeeId;
-import comparators.ComparatorsEmployeeName;
-
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Team {
     private int ID;
     private String name;
-    private List<Employee> employees_in = new LinkedList<>();
-    private List<Project> projects_allocated = new LinkedList<>();
+    private List<Integer> employees_in = new LinkedList<>();
+    private List<Integer> projects_allocated = new LinkedList<>();
     private List<Integer> hours_per_project = new LinkedList<>();
-    public Team(String name, List<Employee> employees_in, List<Project> projects_allocated, List<Integer> hours_per_project) {
+    public Team(String name, List<Integer> employees_in, List<Integer> projects_allocated, List<Integer> hours_per_project) {
         this.name = name;
         this.employees_in = employees_in;
         this.projects_allocated = projects_allocated;
@@ -28,19 +24,19 @@ public class Team {
         this.name = name;
     }
 
-    public List<Employee> getEmployees_in() {
+    public List<Integer> getEmployees_in() {
         return employees_in;
     }
 
-    public void setEmployees_in(List<Employee> employees_in) {
+    public void setEmployees_in(List<Integer> employees_in) {
         this.employees_in = employees_in;
     }
 
-    public List<Project> getProjects_allocated() {
+    public List<Integer> getProjects_allocated() {
         return projects_allocated;
     }
 
-    public void setProjects_allocated(List<Project> projects_allocated) {
+    public void setProjects_allocated(List<Integer> projects_allocated) {
         this.projects_allocated = projects_allocated;
     }
 
@@ -60,16 +56,5 @@ public class Team {
     public void setID(int ID) {
         this.ID = ID;
     }
-
-    public void sortByEmployeeName(){
-        ComparatorsEmployeeName comp = new ComparatorsEmployeeName();
-        Collections.sort(employees_in,comp);
-    }
-
-    public void sortByEmployeeId(){
-        ComparatorsEmployeeId comp = new ComparatorsEmployeeId();
-        Collections.sort(employees_in,comp);
-    }
-
-
+    
 }
