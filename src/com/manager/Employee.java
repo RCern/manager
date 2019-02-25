@@ -10,10 +10,8 @@ public class Employee {
     private List<Project> projects = new LinkedList<>();
     private List<Team> teams = new LinkedList<>();
     private double salary;
-
-
-
     private int TimeParticipation;
+
     public Employee(int employeeid, String name, String type, List<Project> projects, List<Team> teams, double salary,int TimeParticipation) {
         this.EmployeeId = employeeid;
         this.name = name;

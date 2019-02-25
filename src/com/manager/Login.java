@@ -52,7 +52,7 @@ public class Login extends Account{
      * This method verifies if the values entered are matched with the database.
      * @param account   Account object.
      * @param input_usr Inputted Username
-     * @param input_pass Inputted Password
+     * @param input_pass Inputted Passwordùùù
      * @return True if the credentials are correct, otherwise false
      */
         public boolean allow_login(Login account, String input_usr, String input_pass) throws NoSuchAlgorithmException {
