@@ -26,14 +26,14 @@ public class Login extends Account{
     /**
      * This method verifies if the password written by the user mathces the hash saved in the database
      * @param account   Account object
-     * @param inputted_username      Hash value of the password in the database
+     * @param inputted_password      Hash value of the password in the database
      * @return  True if the password is correct, otherwise false
      * @throws NoSuchAlgorithmException
      */
-        private boolean check_password(Login account, String inputted_username) throws NoSuchAlgorithmException
+        private boolean check_password(Login account, String inputted_password) throws NoSuchAlgorithmException
         {
 
-            boolean matched = BCrypt.checkpw(account.getPassword(), inputted_username);
+            boolean matched = BCrypt.checkpw(account.getPassword(), inputted_password);
 
             return matched;
         }
