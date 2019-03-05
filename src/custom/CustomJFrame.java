@@ -1,9 +1,11 @@
 package custom;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import settings.*;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -12,14 +14,25 @@ public abstract class CustomJFrame extends JFrame
 {
     private Settings settings = new Settings();
 
+    /**
+     * default @CustomJFrame's constructor.
+     * @deprecated We'll prefer using the other constructor
+     * */
     public CustomJFrame()
     {
         setPreferredSize(new Dimension(500, 500));
     }
 
+
+    /**
+     * Regular @CustomJFrame's constructor.
+     * <p>
+     * @param type Type of the JFrame we want to create.
+     * */
     public CustomJFrame(String type)
     {
-        //etIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Icone.png")));
+        try { setIconImage( ImageIO.read( new File("./src/pictures/logo.png")) ); }
+        catch (IOException e) { System.out.println("Icon not found"); }
 
         if(!settings.windowMap.containsKey(type)) type = "Default";
 
