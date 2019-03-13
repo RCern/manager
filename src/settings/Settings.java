@@ -1,5 +1,6 @@
 package settings;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,12 +14,18 @@ public class Settings
     public Settings_Color color = new Settings_Color();
     public Map<String, Settings_Window> windowMap = new HashMap<>();
 
+    private final static String FONT_NAME = "Georgia";
+    private final static int FONT_STYLE = Font.PLAIN;
+    private final static int FONT_SIZE = 14;
+    public Font FONT;
+
 
     /**
      * Constructs a new <code>Settings</code> iteration.
      */
     public Settings()
     {
+        FONT = new Font(FONT_NAME, FONT_STYLE, FONT_SIZE);
         // Windows Parameters
         Window_Fill();
     }

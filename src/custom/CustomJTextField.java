@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class CustomJTextField extends JPasswordField implements Set_Color
+public class CustomJTextField extends JPasswordField
 {
     // "NUMERIC",
     // "LOWER_ALPHABET",
@@ -29,7 +29,6 @@ public class CustomJTextField extends JPasswordField implements Set_Color
         setUI(new RoundedCustom_JTextFieldUI(round, shadeWidth, textSpacing));
 
         setHorizontalAlignment(JTextField.CENTER);
-        Set_Color();
         validInput();
 
         // Pour cacher si mot de passe
@@ -63,11 +62,6 @@ public class CustomJTextField extends JPasswordField implements Set_Color
 
         return true; // in case of all accepted
     }
-
-
-    @Override public void setColorBackground(Color C) { setBackground(C); }
-    @Override public void setColorForeground(Color C) { setForeground(C); }
-
 
 
     /**

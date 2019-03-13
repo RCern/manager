@@ -15,8 +15,8 @@ public class Settings_Window
     private static final int DEFAULT_DIMY = 300;
 
     private static final String LOGIN_NAME = "MaPro - Login Page";
-    private static final int LOGIN_DIMX = 400;
-    private static final int LOGIN_DIMY = 500;
+    private static final int LOGIN_DIMX = 450;
+    private static final int LOGIN_DIMY = 400;
 
     private static final String MAIN_NAME = "MaPro - Main Page";
     private static final int MAIN_DIMX = 600;
