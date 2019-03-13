@@ -4,6 +4,12 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
+
+/**
+ * Custom_JButton_Color extends the class JButton.
+ * It is a kind of square button meant to contain a color.
+ * @author Hugues Begeot
+ */
 public class Custom_JButton_Color extends JButton
 {
     public int Length = 15;

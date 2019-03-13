@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 /**
- * Settings class is used to store all generic values of a window.
+ * Settings class is a central class used to store all values and classes related to setting's properties.
  * @author Hugues Begeot
  */
 public class Settings

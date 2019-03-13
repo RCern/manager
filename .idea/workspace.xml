@@ -2,74 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9443fa79-696a-4907-a583-bb05c6732291" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-acl-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-aspects-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-cas-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-config-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-core-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-crypto-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-ldap-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-openid-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-remoting-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-taglibs-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-security-web-3.2.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/HUB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Business.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Costs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Liecences.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Project.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/com/manager/Team.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorTeamID.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsAccount.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsAccountPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsAccountUsername.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeProjects.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeSalary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeTeam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsEmployeeType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsProjectDeadline.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsProjectId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsProjectName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsProjectTeam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/comparators/ComparatorsTeamName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJButton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJFrame.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJLabel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJTextField$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJTextField.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Color.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Transparent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/Limit_JTextField.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/RoundedButton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/custom/RoundedCustom_JTextFieldUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/gui/GUI_Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/settings/Settings.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/settings/Settings_Color.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/manager/settings/Settings_Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_Security_3_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Security_3_2_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/gui/Icone.ICO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/HUB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/HUB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/custom/CustomJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/custom/CustomJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/custom/CustomJLabel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Transparent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/custom/Custom_JButton_Transparent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/gui/GUI_Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/gui/GUI_Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/settings/PleaseDontTouch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/settings/PleaseDontTouch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HUB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HUB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom/CustomJButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/CustomJButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/custom/CustomJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/CustomJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom/CustomJLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/CustomJLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom/CustomJTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/CustomJTextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/custom/CustomJLabel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/custom/Custom_JButton_Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/Custom_JButton_Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom/Set_Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI_Login.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI_Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Icone.ICO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI_Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI_Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/PleaseDontTouch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/PleaseDontTouch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/Settings_Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/Settings_Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/Settings_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/Settings_Window.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,57 +33,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/custom/CustomJFrame.java">
+        <entry file="file://$PROJECT_DIR$/src/custom/Custom_JButton_Color.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Call_Website#0;class#CustomJFrame#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings/Settings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings/Settings_Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings/Settings_Color.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-              <folding>
-                <element signature="method#getBackground#0;class#Settings_Color#0" />
-                <element signature="method#getForeground#0;class#Settings_Color#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings/PleaseDontTouch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +47,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HUB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/GUI_Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="-455">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,27 +88,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java" />
         <option value="$PROJECT_DIR$/src/custom/CustomJButton.java" />
         <option value="$PROJECT_DIR$/src/custom/CustomJLabel.java" />
         <option value="$PROJECT_DIR$/src/custom/CustomJTextField.java" />
-        <option value="$PROJECT_DIR$/src/settings/PleaseDontTouch.java" />
-        <option value="$PROJECT_DIR$/src/custom/CustomJFrame.java" />
         <option value="$PROJECT_DIR$/src/DELETE_ME.form" />
         <option value="$PROJECT_DIR$/src/DELETE_ME.java" />
         <option value="$PROJECT_DIR$/src/GUI_Login.java" />
-        <option value="$PROJECT_DIR$/src/HUB.java" />
-        <option value="$PROJECT_DIR$/src/settings/Settings.java" />
         <option value="$PROJECT_DIR$/src/settings/Settings_Window.java" />
-        <option value="$PROJECT_DIR$/src/gui/GUI_Login.form" />
         <option value="$PROJECT_DIR$/src/settings/Settings_Color.java" />
+        <option value="$PROJECT_DIR$/src/settings/Settings.java" />
+        <option value="$PROJECT_DIR$/src/custom/CustomJFrame.java" />
+        <option value="$PROJECT_DIR$/src/settings/PleaseDontTouch.java" />
+        <option value="$PROJECT_DIR$/src/custom/Custom_JButton_Color.java" />
+        <option value="$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java" />
+        <option value="$PROJECT_DIR$/src/HUB.java" />
         <option value="$PROJECT_DIR$/src/gui/GUI_Login.java" />
+        <option value="$PROJECT_DIR$/src/gui/GUI_Login.form" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="y" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1090" />
   </component>
@@ -212,7 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,13 +133,20 @@
               <item name="manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,12 +203,13 @@
       <workItem from="1552290132818" duration="2952000" />
       <workItem from="1552314174685" duration="10010000" />
       <workItem from="1552344804166" duration="14288000" />
-      <workItem from="1552432405146" duration="5936000" />
+      <workItem from="1552432405146" duration="10235000" />
+      <workItem from="1552484326319" duration="1385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38006000" />
+    <option name="totallyTimeSpent" value="43690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,9 +222,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1328859" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13489933" />
       <window_info id="Structure" order="1" sideWeight="0.50139666" side_tool="true" weight="0.2818792" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -321,7 +232,7 @@
       <window_info x="240" y="142" width="450" height="443" id="UI Designer" order="6" sideWeight="0.49860334" weight="0.2818792" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.34986594" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.34986594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,20 +307,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/custom/Set_Color.java" />
-    <entry file="file://$PROJECT_DIR$/src/custom/Custom_JButton_Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/custom/CustomJButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -424,26 +321,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/custom/CustomJTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/custom/CustomJLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_Login.form" />
     <entry file="file://$PROJECT_DIR$/src/GUI_Login.java" />
+    <entry file="file://$PROJECT_DIR$/src/settings/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/custom/CustomJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="131">
+          <caret line="13" selection-start-line="13" selection-end-line="17" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Call_Website#0;class#CustomJFrame#0" />
@@ -451,40 +344,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/GUI_Login.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/PleaseDontTouch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/settings/Settings_Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HUB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -499,10 +362,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/PleaseDontTouch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom/CustomJLabel.java" />
+    <entry file="file://$PROJECT_DIR$/src/custom/Custom_JButton_Transparent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom/Custom_JButton_Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HUB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom/CustomJTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GUI_Login.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/GUI_Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="-455">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

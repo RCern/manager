@@ -4,7 +4,11 @@ import custom.*;
 import javax.swing.*;
 import java.awt.*;
 
-
+/**
+ * GUI_Login is extending the CustomJFrame class.
+ *  It corresponds to the Login's JFrame (connect with ID and Password).
+ * @author Hugues Begeot
+ */
 public class GUI_Login extends CustomJFrame
 {
     private JPanel panel;
@@ -12,12 +16,17 @@ public class GUI_Login extends CustomJFrame
     private JPanel panelLogo;
 
     private JPanel panelInputs;
-    private JButton buttonLogin;
-    private JLabel labelID;
-    private JLabel labelPassword;
-    private JPasswordField fieldID;
-    private JPasswordField fieldPassword;
     private JPanel panelFields;
+
+    private JLabel labelID;
+    private CustomJTextField fieldID;
+
+    private JLabel labelPassword;
+    private CustomJTextField fieldPassword;
+
+
+    private JButton buttonLogin;
+
 
 
     public GUI_Login(String titre)
@@ -41,6 +50,7 @@ public class GUI_Login extends CustomJFrame
         labelID.setFont( settings.FONT);
         labelPassword.setFont(settings.FONT);
 
+        buttonLogin.addActionListener(e -> System.out.println(fieldID.Field() + " " + fieldPassword.Field()) );
 
         add(panel);
         pack();

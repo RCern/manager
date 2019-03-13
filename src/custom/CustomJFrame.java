@@ -10,9 +10,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 
-
+/**
+ * CustomJFrame is extending the JFrame class
+ *  It contains various optimized prefabs for creating a JFrame, including a setting class iteration.
+ * @author Hugues Begeot
+ */
 public abstract class CustomJFrame extends JFrame
 {
     protected Settings settings = new Settings();

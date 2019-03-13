@@ -8,6 +8,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * Class containing unfinished business and / or methods that I may need further down the line.
+ * @author Hugues Begeot
+ */
 public class PleaseDontTouch
 {
     private final String Path_Color_UI = "./src/Colors_UI.txt";
