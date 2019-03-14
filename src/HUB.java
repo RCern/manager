@@ -11,5 +11,6 @@ public class HUB
     {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         GUI_Login Login = new GUI_Login("Login");
+        System.out.println(Login);
     }
 }
