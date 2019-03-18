@@ -26,7 +26,7 @@
 </ul>
 <nav>
   <div class="nav-wrapper blue lighten-4">
-   <a href="http://localhost/materialize/" class="brand-logo"><img style="height: 100%" src="jean.jpg"></a>
+   <a href="http://localhost/materialize/" class="brand-logo"><img style="height: 100%" src="https://cdn.discordapp.com/attachments/537347312133865493/552111286197026836/Logo_Full.png"></a>
     <ul class="right hide-on-med-and-down">
       <li><a href="logout.php">Logout</a></li>
       
@@ -34,8 +34,21 @@
   </div>
 </nav>
 
+
 <div class="parallax-container">
       <div class="parallax"><img src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
+      <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background blue lighten-4">
+      </div>
+      <a href="main.php"><img class="circle" src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/43271719_2132142217114823_4203525496647974912_n.jpg?_nc_cat=103&_nc_ht=scontent-cdg2-1.xx&oh=3e15e050f2f35e65eaeac7d063cb2f52&oe=5D4E432E"></a>
+      <a href="main.php"><span class="white-text name"><?php echo $_SESSION['username']?></span></a>
+     
+    </div></li>
+    <li><a href="main.php"><i class="material-icons">people</i>Employees</a></li>
+    <li><a href="projects.php"><i class="material-icons">event_note</i>Projects</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <br>
     <br>
     <br>
@@ -71,18 +84,6 @@
 
 
 </div>
-  <ul id="slide-out" class="sidenav sidenav-fixed">
-    <li><div class="user-view">
-      <div class="background blue lighten-4">
-      </div>
-      <a href="main.php"><img class="circle" src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/43271719_2132142217114823_4203525496647974912_n.jpg?_nc_cat=103&_nc_ht=scontent-cdg2-1.xx&oh=3e15e050f2f35e65eaeac7d063cb2f52&oe=5D4E432E"></a>
-      <a href="main.php"><span class="white-text name"><?php echo $_SESSION['username']?></span></a>
-     
-    </div></li>
-    <li><a href="main.php"><i class="material-icons">people</i>Employees</a></li>
-    <li><a href="projects.php"><i class="material-icons">event_note</i>Projects</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 </div>
   <footer class="page-footer blue darken-3 bottom-fixed">

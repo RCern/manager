@@ -63,9 +63,8 @@
   <br>
   </div>
 <?php
-    require_once("login.php");
+   require_once("login.php");
     if(isset($_POST['login']) && isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password'])){
-
       $name = $_POST['email'];
       $password = $_POST['password'];
   
