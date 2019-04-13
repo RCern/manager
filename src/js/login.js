@@ -20,7 +20,7 @@ alert(data);
 } else {
 $("form")[0].reset();
 $('input[type="text"],input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
-	window.location.href = 'connexion_Sign_Up.php';
+	window.location.href = 'Account.php';
 } 
 
 });
