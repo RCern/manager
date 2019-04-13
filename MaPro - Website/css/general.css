@@ -70,14 +70,19 @@ a.aBig:active
 
 
 /* Custom color */
+.darkBackground { background: #333333; }
+
 .blueDeep  { color:#213B6B; }
 .blueLight { color:#5098D9; }
 
 .whiteToBlueLight { color:white; }
 .whiteToBlueLight:hover { color:#5098D9; }
 
-.blueLighttoBlueDeep { color:#5098D9; }
-.blueLighttoBlueDeep:hover { color:#213B6B; }
+.whiteToBlueDeep { color:white; }
+.whiteToBlueDeep:hover { color:#213B6B; }
+
+.blueLightToBlueDeep { color:#5098D9; }
+.blueLightToBlueDeep:hover { color:#213B6B; }
 
 
 

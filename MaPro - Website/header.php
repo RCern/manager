@@ -7,10 +7,10 @@
 
 <!-- Logo (image + text) on the left -->
 
-    <a href="php/homepage.php" data-target="mobile-demo">
-        <img class="zoom" src="./pictures/logo.png" alt="MaPro's logo" height="80%">
+    <a href="homepage.php" data-target="mobile-demo">
+        <img class="zoom" src="pictures/logo.png" alt="MaPro's logo" height="80%">
     </a>
-    <div class="col s19 zoom"> <a class="aTitle" href="php/homepage.php">MaPro</a></div>
+    <div class="col s19 zoom"> <a class="aTitle" href="homepage.php">MaPro</a></div>
 
 
 
@@ -20,20 +20,17 @@
 
 
 <!-- Links on the right -->
-    <a href="php/connexion_Login.php" class="aBig col s3 hide-on-med-and-down zoom whiteToBlueLight">
-        <i class="material-icons left">account_circle</i>
-        Login
-    </a>
+    <?php addHeaderLink("account_circle", "Login", "connexion_Login.php"); ?>
+
 
     <!-- Component that calls the side-menu when the window is reduced -->
     <a href="#" class="sidenav-trigger hide-on-large-only zoom whiteToBlueLight" data-target="mobile-links">
         <i class="material-icons">menu</i>
     </a>
 
-    <a href="php/connexion_Sign_Up.php" class="aBig col s3 hide-on-med-and-down zoom whiteToBlueLight">
-        <i class="material-icons left">person_add</i>
-        Sign-up
-    </a>
+
+    <?php addHeaderLink("person_add", "Sign-up", "connexion_Sign_Up.php"); ?>
+
 
     <div class="col s4 hide-on-med-and-down">
         <a class="zoom btn waves-effect waves-light pulse" href="/pictures/logo.png" download="MaPro">
@@ -66,3 +63,16 @@
         $('.sidenav').sidenav();
     });
 </script>
+
+
+<?php
+  function addHeaderLink($icon, $text, $direction)
+  {
+    echo '
+        <a href="  ' . $direction . ' " class="aBig col s3 hide-on-med-and-down zoom whiteToBlueLight">
+            <i class="material-icons left">  ' . $icon . ' </i>
+            ' . $text . ' 
+        </a>
+    ';
+  }
+?>

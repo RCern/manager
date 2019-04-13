@@ -44,7 +44,7 @@
     <body>
 
     <!-- adding the header -->
-        <?php require_once 'php/header.php'; ?>
+        <?php require 'header.php'; ?>
         <main>
 
         <br>
@@ -100,7 +100,7 @@
 
 
         </main>
-        <?php require_once 'php/footer.php'; ?>
+        <?php require 'footer.php'; ?>
 
     </body>
 </html>

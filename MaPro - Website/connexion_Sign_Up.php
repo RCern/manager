@@ -41,15 +41,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
-    <!-- adding the header -->
-        <?php require 'php/header.php'; ?>
-    </body>
 
     <body>
 
     <!-- adding the header -->
-        <?php require_once 'php/header.php'; ?>
+        <?php require_once 'header.php'; ?>
         <main>
 
             <br>
@@ -146,7 +142,7 @@
 
             </main>
     <!-- adding the footer -->
-        <?php require_once 'php/footer.php'; ?>
+        <?php require_once 'footer.php'; ?>
 
     </body>
 

@@ -45,7 +45,7 @@
 
   <body>
   <!-- adding the header -->
-    <?php include 'php/header.php'; ?>
+    <?php include 'header.php'; ?>
     
 
     <main>
@@ -160,7 +160,7 @@
 
     </main>
   <!-- adding the header -->
-    <?php include 'php/footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
   </body>
 
