@@ -14,8 +14,8 @@ $sql = "SELECT * FROM account WHERE username='$username' AND password='$password
 $result = $conn->query($sql);
 if($result->num_rows == 1){
 	$_SESSION['username'] = $username;
- header('Location: Account.php');
- exit();
+ 	echo "done";
+
 }else{
 echo "Username or Password is wrong...!!!!";
 }

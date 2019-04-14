@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/inputField.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
+  <link rel="stylesheet" href="css/frontpageH.css"/>
 
   <style>
       #page

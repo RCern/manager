@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/headerFooter.css"/>
-
+<link rel="stylesheet" href="css/frontpageH.css"/>
 
 <div class="row rowHeader valign-wrapper foreground">
 

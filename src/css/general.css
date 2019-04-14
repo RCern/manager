@@ -1,51 +1,3 @@
-/* All Headers */
-.h
-{
-    font-family: Comfortaa;
-}
-
-h1
-{
-    text-align: center;
-    color:#213B6B;
-    font-family: Comfortaa;
-    font-weight: bold;
-}
-
-h2
-{
-    text-align: center;
-    color:#5098D9;
-    font-family: Comfortaa;
-}
-
-h3
-{
-    color:#FFFFFF;
-    font-family: Comfortaa;
-}
-
-h4
-{
-    color:#5098D9;
-    font-family: Comfortaa;
-}
-
-h5
-{
-    color:#232323;
-    font-family: Comfortaa;
-}
-
-h6
-{
-    color:#767676;
-    line-height: 1.6;
-    font-family: Comfortaa;
-}
-
-
-
 /* Big a */
 a.aBig:link
 {
@@ -70,16 +22,19 @@ a.aBig:active
 
 
 /* Custom color */
+.darkBackground { background: #333333; }
+
 .blueDeep  { color:#213B6B; }
 .blueLight { color:#5098D9; }
 
 .whiteToBlueLight { color:white; }
 .whiteToBlueLight:hover { color:#5098D9; }
 
-.blueLighttoBlueDeep { color:#5098D9; }
-.blueLighttoBlueDeep:hover { color:#213B6B; }
+.whiteToBlueDeep { color:white; }
+.whiteToBlueDeep:hover { color:#213B6B; }
 
-
+.blueLightToBlueDeep { color:#5098D9; }
+.blueLightToBlueDeep:hover { color:#213B6B; }
 
 
 /* Zooms when hovering */
@@ -87,21 +42,6 @@ a.aBig:active
 .zoom:hover { transform: scale(1.2); }
 .smallZoom:hover { transform: scale(1.05); }
 
-
-
-/* Overlay */
-.overlay
-{
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
-  width: 100%;
-  height:100%;
-  opacity:1;
-  text-align: center;
-  z-index:3;
-  display: inline-block;
-  vertical-align: middle;
-}
 
 /* Zooms when hovering */
 .img, IMG.displayed
@@ -119,7 +59,19 @@ a.aBig:active
 .fa-lg:hover { color:#213B6B; }
 
 
-
+/* Overlay */
+.overlay
+{
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  height:100%;
+  opacity:1;
+  text-align: center;
+  z-index:3;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 
 /* Tooltip */

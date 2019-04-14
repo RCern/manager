@@ -1,0 +1,45 @@
+/* All Headers */
+.h
+{
+    font-family: Comfortaa;
+}
+
+h1
+{
+    text-align: center;
+    color:#213B6B;
+    font-family: Comfortaa;
+    font-weight: bold;
+}
+
+h2
+{
+    text-align: center;
+    color:#5098D9;
+    font-family: Comfortaa;
+}
+
+h3
+{
+    color:#FFFFFF;
+    font-family: Comfortaa;
+}
+
+h4
+{
+    color:#5098D9;
+    font-family: Comfortaa;
+}
+
+h5
+{
+    color:#232323;
+    font-family: Comfortaa;
+}
+
+h6
+{
+    color:#767676;
+    line-height: 1.6;
+    font-family: Comfortaa;
+}

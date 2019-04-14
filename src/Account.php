@@ -1,12 +1,15 @@
 <?php
     // On démarre la session AVANT d'écrire du code HTML
-    /*if(!isset($_SESSION['username'])){
-        header("Location: index.php");
-    }*/
-    session_start();
+session_start();
 
+    if(!isset($_SESSION['username'])){
+        header("Location: index.php");
+    }
     // length currently occupied by the last row of cards
     $_SESSION['length'] = 0;
+
+    // size taken by a card
+    $_SESSION['size'] = 3;
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
@@ -16,10 +19,12 @@
 <html lang="en">
   <link rel="icon" type="image/png" href="./pictures/logo.png"/>
 
-  <link rel="stylesheet" href="css/homepage.css"/>
-  <link rel="stylesheet" href="css/general.css"/>
-  <link rel="stylesheet" href="css/fontComfortaa.css"/>
-  <link rel="stylesheet" href="css/projetCard.css"/>
+
+    <link rel="stylesheet" href="css/general.css"/>
+    <link rel="stylesheet" href="css/fontComfortaa.css"/>
+    <link rel="stylesheet" href="css/projetCard.css"/>
+    <link rel="stylesheet" href="css/tooltip.css"/>
+    <link rel="stylesheet" href="css/backpage.css"/>
 
   <style>
       #page
@@ -58,39 +63,19 @@
 
     <body>
 
-      <!-- HEADER -->
-        <div class="navbar-fixed darkBackground">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="homepage.php" class="brand-logo">Logo</a>
-
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                        <li><a href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
-                        <li>
-                            <form>
-                                <div class="input-field">
-                                    <input id="search" type="search" required>
-                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                    <i class="material-icons">close</i>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
-
-                    
-                </div>
-
-            </nav>
-        </div>
+       <!-- adding the header -->
+        <?php include 'headerBackpage.php'; ?>
+    
 
       <!-- CARD TEST -->
-        <div class="container" style="background:#222222">
-            <h1 class="whiteToBlueLight"> White To Blue Light !</h1>
-            <br><br>
-            <h1 class="whiteToBlueDeep"> White To Blue Deep !</h1>
-            <br><br>
-            <h1 class="BlueLightToBlueDeep"> Blue Light To Blue Deep !</h1>
+       <div class="container center grey darken-3">
+                <br>
+                <h1 class="whiteToBlueLight"> White To Blue Light !</h1>
+                <br><br>
+                <h1 class="whiteToBlueDeep"> White To Blue Deep !</h1>
+                <br><br>
+                <h1 class="BlueLightToBlueDeep"> Blue Light To Blue Deep !</h1>
+                <br>
         </div>
 
         <div class="container">
@@ -115,16 +100,11 @@
     }
     $conn->close();
  ?>
-            <div class="progress">
-                <div class="determinate" style="width: 70%"></div>
-            </div>
-        </div>
+           
 
     </body>
 
-    <script>
-        $(".navbar-fixed").css("background-color", #333333);
-    </script>
+   
 </html>
 
 <?php

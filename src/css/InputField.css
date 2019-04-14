@@ -1,5 +1,5 @@
 /* label color */
-.input-field label
+.input label, .select label
 {
     font-family: Comfortaa;
     font-weight: bold;
@@ -7,14 +7,14 @@
 }
 
 /* label focus color */
-.input-field input[type=text]:focus + label
+.input input[type=text]:focus + label
 {
     font-family: Comfortaa;
     color: #5098D9;
 }
 
 /* label underline focus color */
-.input-field input[type=text]:focus
+.input input[type=text]:focus
 {
     font-family: Comfortaa;
     border-bottom: 1px solid #5098D9;
@@ -22,7 +22,7 @@
 }
 
 /* valid color */
-.input-field input[type=text].valid
+.input input[type=text].valid
 {
     font-family: Comfortaa;
     border-bottom: 1px solid #5098D9;
@@ -30,7 +30,7 @@
 }
 
 /* invalid color */
-.input-field input[type=text].invalid
+.input input[type=text].invalid
 {
     font-family: Comfortaa;
     border-bottom: 1px solid #b42222;
@@ -38,7 +38,8 @@
 }
 
 /* icon prefix focus color */
-.input-field .prefix.active
+.input .prefix.active
 {
+    font-family: Comfortaa;
     color: #5098D9;
 }
