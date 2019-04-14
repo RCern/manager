@@ -157,12 +157,12 @@
       <div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">
       ';
 
-    if($priority == 1) echo '<div class="card red   lighten-1">';
-    if($priority == 2) echo '<div class="card blue  lighten-1">';
-    if($priority == 3) echo '<div class="card green lighten-1">';
+    if($priority == 1) echo '<div class="card smallZoom red   lighten-1">';
+    if($priority == 2) echo '<div class="card smallZoom blue  lighten-1">';
+    if($priority == 3) echo '<div class="card smallZoom green lighten-1">';
 
       echo '
-                    <div class="smallZoom card-content">
+                    <div class="card-content">
 
                         <a class="card-title" style="font-weight: bold;color: inherit;" href="project.php?ID='. rand(1, 100) .'">' . $title . '</a>
                         <br><br>
