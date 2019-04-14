@@ -16,7 +16,7 @@
   </style>
 
 
-  <title>MaPro - Homepage</title>
+  <title>MaPro - Project n° <?php echo $_GET['ID']; ?> </title>
 
 
     <head>

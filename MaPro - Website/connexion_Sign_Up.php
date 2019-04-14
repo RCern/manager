@@ -60,11 +60,13 @@
                         <!-- Username -->
                         <div class="row">
                             <div class="col s3"></div>
+                            
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">account_circle</i>
                                 <input id="username_prefix" type="text" class="validate" required>
                                 <label for="username_prefix">Username</label>
                             </div>
+
                             <div class="col s3"></div>
                         </div>
 
@@ -76,22 +78,26 @@
                         <!-- Password -->
                         <div class="row">
                             <div class="col s3"></div>
+
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">security</i>
                                 <input id="password_prefix" type="password" class="validate" pattern=".{8,}" required>
                                 <label for="password_prefix">Password</label>
                             </div>
+
                             <div class="col s3"></div>
                         </div>
 
                         <!-- Password Verification -->
                         <div class="row">
                             <div class="col s3"></div>
+
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">security</i>
                                 <input id="passwordVerif_prefix" type="password" class="validate" pattern=".{8,}" required>
                                 <label for="passwordVerif_prefix">Password Verification</label>
                             </div>
+
                             <div class="col s3"></div>
                         </div>
 
@@ -102,11 +108,13 @@
                         <!-- Email  -->
                         <div class="row">
                             <div class="col s3"></div>
+
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">alternate_email</i>
                                 <input id="email_prefix" type="email" class="validate" required>
                                 <label for="email_prefix">Email (in case you forget your IDs !)</label>
                             </div>
+
                             <div class="col s3"></div>
                         </div>
                         
@@ -117,11 +125,13 @@
                         <!-- Sign up Token  -->
                         <div class="row">
                             <div class="col s3"></div>
+
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">verified_user</i>
                                 <input id="token_prefix" type="email" class="validate" required>
                                 <label for="token_prefix">Sign-up Token</label>
                             </div>
+
                             <div class="col s3"></div>
                         </div>
                         
@@ -130,11 +140,13 @@
                         <!-- Submit button -->
                         <div class="row">
                             <div class="col s5"></div>
+
                             <div class="input-field col s2">
                                 <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action">
                                 <i class="material-icons center">get_app</i> Sign-up !
                                 </button>
                             </div>
+
                             <div class="col s5"></div>
                         </div>
 

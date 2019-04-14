@@ -6,7 +6,7 @@
 <div class="navbar-fixed darkBackground">
     <nav>
         <div class="nav-wrapper">
-            <a href="homepage.php" class="brand-logo whiteToBlueDeep">MaPro</a>
+            <a href="homepage.php" class="brand-logo whiteToBlueDeep zoom" style="font-weight: bold">MaPro</a>
 
             <!-- Component that calls the side-menu when the window is reduced -->
             <a href="#" class="sidenav-trigger hide-on-large-only zoom whiteToBlueLight" data-target="mobile-links">
@@ -15,16 +15,16 @@
 
             <!-- Links -->
             <ul class="right hide-on-med-and-down">
-                <li><a class="whiteToBlueDeep dropdown-trigger" href="#!" data-target="dropdown1">
+                <li><a class="whiteToBlueDeep dropdown-trigger smallZoom" href="#!" data-target="dropdown1">
                     <i class="material-icons left">arrow_drop_down</i>
                     Project's display</a>
                 </li>
-                <li><a class="whiteToBlueDeep" href="#"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="whiteToBlueDeep" href="#"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                <li><a class="whiteToBlueDeep" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
+                <li><a class="whiteToBlueDeep smallZoom" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
+                <li><a class="whiteToBlueDeep smallZoom" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
+                <li><a class="whiteToBlueDeep smallZoom" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
                 <li>
                     <form>
-                        <div class="input-field">
+                        <div class="input-field smallZoom">
                             <input id="search" type="search" required>
                             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                             <i class="material-icons">close</i>

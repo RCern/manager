@@ -10,6 +10,9 @@
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
+    
+    // Max length for a row of cards
+    $_SESSION['Nom'] = "Jean Michel POKER";
 ?>
 
 
@@ -31,7 +34,7 @@
     </style>
 
 
-    <title>MaPro - Homepage</title>
+    <title>MaPro - My Account <?php echo $_SESSION["Nom"]; ?> </title>
 
 
     <head>
@@ -159,7 +162,8 @@
     if($priority == 3) echo '<div class="card green lighten-1">';
 
       echo '
-                    <div class="card-content">
+                    <div class="smallZoom card-content">
+
                         <a class="card-title" style="font-weight: bold;color: inherit;" href="project.php?ID='. rand(1, 100) .'">' . $title . '</a>
                         <br><br>
                         <h5>Directed by :<br></h5>
@@ -185,32 +189,3 @@
       ';
   }
 ?>
-
-
-  <?php
-      echo '<a href="project.php?ID='. rand(1, 100) .'">';
-
-      echo '
-      <div class="container card">
-        <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-
-        <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#test4">Test 1</a></li>
-            <li class="tab"><a href="#test5">Test 2</a></li>
-            <li class="tab"><a href="#test6">Test 3</a></li>
-        </ul>
-        </div>
-
-        <div class="card-content grey lighten-4">
-        <div id="test4">Test 1</div>
-        <div id="test5">Test 2</div>
-        <div id="test6">Test 3</div>
-        </div>
-    </div>
-  ';
-
-      echo '</a>';
-  ?>
