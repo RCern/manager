@@ -99,6 +99,27 @@
                     <br><br>
 
 
+                    <!-- Leader -->
+                    <div class="row">
+                        <div class="col s4"></div>
+
+                        <div class="input-field col s4">
+                            <select class="icons">
+                                <option value="" disabled selected>Please choose a Team Leader</option>
+                                <option value="" data-icon="pictures/logo.png">John Doe</option>
+                                <option value="" data-icon="pictures/logo.png">Jane Doe</option>
+                                <option value="" data-icon="pictures/logo.png">Warren DJ edir</option>
+                            </select>
+                            <label>Team Leader</label>
+                        </div>
+
+                        <div class="col s4"></div>
+                    </div>
+                    
+
+                    <br><br>
+
+
                     <!-- Time -->
                     <div class="row">
                         <div class="col s2"></div>
