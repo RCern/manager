@@ -1,4 +1,0 @@
-Color Background Index;Coucou;
-Grief;80;170;105;180;180;180;
-Azerty;25;145;236;40;40;240;
-Coucou;80;80;80;160;160;160;

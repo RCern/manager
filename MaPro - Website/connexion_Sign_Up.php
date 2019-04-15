@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
   <link rel="stylesheet" href="css/frontpageH.css"/>
 
-
   <style>
       #page
       {
@@ -41,8 +40,16 @@
 
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Include JS File Here -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
     </head>
 
+    <body>
+    <!-- adding the header -->
+        <?php require 'header.php'; ?>
+    </body>
 
     <body>
 
@@ -53,51 +60,45 @@
             <br>
 
                 <div class="container row" style="background-color: #ebebeb">
-                    <form class="col s12">
+                    <form class="col s12 from" method="post" action="#">
 
                         <br>
 
                         <!-- Username -->
                         <div class="row">
                             <div class="col s3"></div>
-                            
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">account_circle</i>
-                                <input id="username_prefix" type="text" class="validate" required>
-                                <label for="username_prefix">Username</label>
+                                <input id="username" type="text" class="validate" required>
+                                <label for="username">Username</label>
                             </div>
-
                             <div class="col s3"></div>
                         </div>
 
                                 
                         <br><br>
                         
-                        <h4 class="center blueLight">Please enter at least 8 characters for your password :)</h4>
+                        <h4 class="center">Please enter at least 8 characters for your password :)</h4>
 
                         <!-- Password -->
                         <div class="row">
                             <div class="col s3"></div>
-
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">security</i>
-                                <input id="password_prefix" type="password" class="validate" pattern=".{8,}" required>
-                                <label for="password_prefix">Password</label>
+                                <input id="password" type="password" class="validate" pattern=".{8,}" required>
+                                <label for="password">Password</label>
                             </div>
-
                             <div class="col s3"></div>
                         </div>
 
                         <!-- Password Verification -->
                         <div class="row">
                             <div class="col s3"></div>
-
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">security</i>
-                                <input id="passwordVerif_prefix" type="password" class="validate" pattern=".{8,}" required>
-                                <label for="passwordVerif_prefix">Password Verification</label>
+                                <input id="passwordVerif" type="password" class="validate" pattern=".{8,}" required>
+                                <label for="passwordVerif">Password Verification</label>
                             </div>
-
                             <div class="col s3"></div>
                         </div>
 
@@ -108,13 +109,11 @@
                         <!-- Email  -->
                         <div class="row">
                             <div class="col s3"></div>
-
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">alternate_email</i>
-                                <input id="email_prefix" type="email" class="validate" required>
-                                <label for="email_prefix">Email (in case you forget your IDs !)</label>
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">Email (in case you forget your IDs !)</label>
                             </div>
-
                             <div class="col s3"></div>
                         </div>
                         
@@ -125,13 +124,11 @@
                         <!-- Sign up Token  -->
                         <div class="row">
                             <div class="col s3"></div>
-
                             <div class="input-field col s6">
                                 <i class="material-icons prefix blueDeep">verified_user</i>
-                                <input id="token_prefix" type="email" class="validate" required>
-                                <label for="token_prefix">Sign-up Token</label>
+                                <input id="token" type="text" class="validate" required>
+                                <label for="token">Sign-up Token</label>
                             </div>
-
                             <div class="col s3"></div>
                         </div>
                         
@@ -140,13 +137,11 @@
                         <!-- Submit button -->
                         <div class="row">
                             <div class="col s5"></div>
-
                             <div class="input-field col s2">
-                                <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action">
+                                <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action" id="register">
                                 <i class="material-icons center">get_app</i> Sign-up !
                                 </button>
                             </div>
-
                             <div class="col s5"></div>
                         </div>
 
