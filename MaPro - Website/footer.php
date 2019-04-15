@@ -14,7 +14,7 @@
                 <h6 class="white-text">Villejuif 94800</h6>
             </div>
 
-            <div class="col l4 offset-l2 s12">
+            <div class="col l4 offset-l1 s12">
                 <h4 class="center">Contact us :</h4><br>
                 <ul>
                     <h6 class="white-text">Phone : 01 46 77 46 77</h6>
@@ -25,7 +25,7 @@
                         <a class="aBig whiteToBlueLight tooltip" href="mailto:raducern@gmail.com">raduCern@gmail.com
                             <span class="tooltiptext">Click on me to send a mail !</span>
                         </a>
-                    </h6>   
+                    </h6>
 
                     <br>
                     

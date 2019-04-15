@@ -57,8 +57,8 @@
         <div class="overlay">
           <div class="parallax"><img src="pictures/jean.jpg" alt="Unsplashed background img 1"></div>
 
-            <h1 class="blueLight" style="font-weight:bold;">GROS TITRE T'AS VU</h1>
-            <h3>Là on met du texte, du coup ça rend bien</h3>
+            <h1 class="blueLight" style="font-weight:bold;">Professional Management Website</h1>
+            <h3>An Enterprise Resource Planning for the general public</h3>
 
           </div>
         </div>
@@ -74,9 +74,9 @@
           <div class="row">
 
             <?php
-              addIconRow("attach_money", "Affordable Software", "Money money money");
-              addIconRow("thumb_up", "Intuitive Design", "We put an emphasis on having an intuitive design, so that you will easily go through all our features with ease :)");
-              addIconRow("desktop_windows", "Desktop App", "We are currently developping a similar version of MaPro for your computer ! Soon, you will be able to access all your project from your desktop ^^");
+              addIconRow("attach_money", "Affordable Software", "One of the cheapest yet performing ERP tool on the market");
+              addIconRow("thumb_up", "Intuitive Design", "We put an emphasis on having an intuitive design to ensure you will go through all our features with ease ");
+              addIconRow("desktop_windows", "Web App", "We are currently working on accessing MaPro on other devices.");
             ?>
 
           </div>
@@ -102,9 +102,9 @@
 
       <div class="col s5">
         <h1 class="center blueDeep">In-depth Presentation</h1>
-        <h2 class="center blueLight">yea, homie</h2>
-        <h5>Here's a shitload of content we will to write in order to fill up this content. cool, isn't it ?</h5>
-        <?php blablabla(10); ?>
+        <h2 class="center blueLight">MaPro, an ERP tool</h2>
+        <h5>MaPro is a project manager used for business or personal purposes. It is an easy-to-handle tool to help plan out your team's projects inside a company. It follows the progression of the project as well as its participants, leader, costs and revenues.</h5>
+
       </div>
 
       
@@ -119,12 +119,12 @@
   <!--   Information Collapsible (Accordeon)   -->
 
       <div class="container center">
-        <h1 class="blueDeep">Any question ?<br>Here's the FAQ</h1><br>
+        <h1 class="blueDeep">Our most asked questions :</h1><br>
         <ul class="collapsible">
           <?php
-            addCollapsible("How can MaPro help my team ?", "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.");
-            addCollapsible("Can I use MaPro personally ?", "Lorem ipsum dolor sit amet.");
-            addCollapsible("How was MaPro created ?", "Lorem ipsum dolor sit amet.");
+            addCollapsible("Can I use MaPro personally ?", "MaPro can indeed be used personally. You can easily create and manage your own projects for personal purposes.");
+            addCollapsible("How can MaPro help my team ?", "MaPro is made to ensure the best experience for its users. It has an understandable interface with multiple features for your team's projects.");
+            addCollapsible("How was MaPro created ?", "MaPro is a L3 digital student's project. The core idea was to create an affordable ERP tool as we believe main leaders on the market offer overpriced experiences.");
           ?>
         </ul>
       </div>
@@ -137,7 +137,7 @@
       <div class="container center">
 
         <h1 class="blueDeep">Introducing our team</h1>
-        <h4 class="blueLight">5 wonderful lovely people ._.</h4><br>
+        <h4 class="blueLight">5 wonderful lovely people</h4><br>
 
         <?php
           echo '<div class="row">';
@@ -148,7 +148,7 @@
 
           echo '<div class="row">';
             echo '<div class="col s1 m1 l1"></div>';
-            addTeamCard('Clément', 'Lambling', 'Developer', 'legRight.jpg', 'https://github.com/Ricainz', '.');
+            addTeamCard('Clément', 'Lambling', 'Developer', 'legRight.jpg', 'https://github.com/Ricainz', 'https://www.linkedin.com/in/cl%C3%A9ment-lambling-a54a93183/');
             echo '<div class="col s2 m2 l2"></div>';
             addTeamCard('Charles', 'Robichon', 'Developer', 'legLeft.jpg', 'https://github.com/CharlesRobichon', 'https://www.linkedin.com/in/charles-robichon-668957152/');
             echo '<div class="col s1 m1 l1"></div>';
