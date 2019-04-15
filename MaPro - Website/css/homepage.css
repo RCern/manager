@@ -1,0 +1,22 @@
+.homepageParallax
+{
+    height: 90%;
+    background-size: 100% 100%;
+    z-index:2;
+}
+
+.foreground { z-index: 10; }
+.parallax-container, .container, .parallax { z-index: 2; }
+
+
+.homepageIconRow
+{
+line-height:1.6;
+margin:5%;
+}
+
+.collapsible-body
+{
+    margin:5%;
+    text-align:justify;
+}

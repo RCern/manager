@@ -1,0 +1,10 @@
+.navbar-fixed, .p, .span, .h
+{
+    color: inherit;
+    font-family: Comfortaa;
+}
+
+.nav, .navbar-fixed, .nav-wrapper
+{
+    color:black  !important;
+}
