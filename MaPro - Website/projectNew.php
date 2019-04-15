@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
   <link rel="stylesheet" href="css/projetCard.css"/>
+  <link rel="stylesheet" href="css/tooltip.css"/>
   <link rel="stylesheet" href="css/backpage.css"/>
 
 
@@ -40,6 +41,8 @@
 
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/newproject.js"></script>
     </head>
 
 
@@ -54,7 +57,7 @@
             <br>
 
             <div class="container row" style="background-color: #ebebeb">
-                <form class="col s12">
+                <form class="col s12 form">
 
                     <br>
 
@@ -103,13 +106,28 @@
                         <div class="col s4"></div>
 
                         <div class="input-field col s4">
-                            <select class="icons">
-                                <option value="" disabled selected>Please choose a Team Leader</option>
-                                <option value="" data-icon="pictures/logo.png">John Doe</option>
-                                <option value="" data-icon="pictures/logo.png">Jane Doe</option>
-                                <option value="" data-icon="pictures/logo.png">Warren DJ edir</option>
+                            <select class="icons" id="team">
+                                <option value="" disabled selected>Please choose a Team</option>
+                                <?php  
+                                    require_once('connectdb.php');
+                                    $conn = connect();
+
+                                    $sql = "SELECT Tname FROM team";
+                                    $result = $conn->query($sql);
+                                    $i = 0;
+                                    if ($result->num_rows > 0) {
+                                      while($row[] = $result->fetch_assoc()) {
+                                          echo '<option value="'. $row[$i]["Tname"] .'" data-icon="pictures/logo.png">'.$row[$i]["Tname"].'</option>';
+                                          $i++;
+                                    }
+                                }
+        
+                                    $conn->close();
+                                    
+                                ?>
+                                
                             </select>
-                            <label>Team Leader</label>
+                            <label>Team</label>
                         </div>
 
                         <div class="col s4"></div>
@@ -173,7 +191,7 @@
                     <div class="row">
                         <div class="col s5"></div>
                         <div class="input-field col s2">
-                            <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action">
+                            <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action" id="create">
                             <i class="material-icons center">get_app</i> Sign-up !
                             </button>
                         </div>
@@ -195,7 +213,7 @@
         $(document).ready(function()
         {
             $('select').formSelect();
-            $('.datepicker').datepicker();
+            $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
         });
     </script>
 </html>

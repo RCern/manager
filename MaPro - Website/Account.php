@@ -94,51 +94,27 @@
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
 
-                <?php
+               <?php
 
-                    for($i = 0; $i < 40; $i++)
-                    {
-                        switch(rand(1, 8))
-                        {
-                            case 1:
-                                addProjectCard("Apex Legend", "John Doe", "10 Novembre 2019", rand(1, 100), rand(1, 3));
-                            break;
 
-                            case 2:
-                                addProjectCard("Fortnite", "Jane Sim", "15 Février 2019", rand(1, 100), rand(1, 3));
-                            break;
+            require_once('connectdb.php');
+            $conn = connect();
 
-                            case 3:
-                                addProjectCard("Yo mama so fat", "Johnny Sins", "14 Juin 2019", rand(1, 100), rand(1, 3));
-                            break;
-
-                            case 4:
-                                addProjectCard("Pikmin 4", "Nintendo", "Lol mdr jamais", rand(1, 100), rand(1, 3));
-                            break;
-
-                            case 5:
-                                addProjectCard("Diablo Immortal", "Blizzard", "Coming soon", rand(1, 100), rand(1, 3));
-                            break;
-
-                            case 6:
-                                addProjectCard("League of Dotas", "China", "06 Décembre 2021", rand(1, 100), rand(1, 3));
-                            break;
-
-                            case 7:
-                                addProjectCard("Death Stranding", "Hideo Kojima", "To be announced", rand(1, 100), rand(1, 3));
-                            break;
-
-                            case 8:
-                                addProjectCard("Pokemon Sword and Shield", "Nintendo", "15 Novembre 2019", rand(1, 100), rand(1, 3));
-                            break;
-
-                            default:
-                                addProjectCard("Titleless", "Leaderless", "dateless", 0, 3);
-                            break;
-                        }
-                    }
-
-                ?>
+            $sql = "SELECT P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+            $result = $conn->query($sql);
+            $i = 0;
+            if ($result->num_rows > 0) {
+              while($row[] = $result->fetch_assoc()) {
+                  
+                  addProjectCard($row[$i]["name"],$row[$i]["Tname"],$row[$i]["deadline"],$row[$i]["percentageDone"],$row[$i]["priority"]);
+                  $i++;
+        }
+          
+    } else {
+        echo "EMPTY DATABASE";
+    }
+    $conn->close();
+ ?>
 
             </div>
 
