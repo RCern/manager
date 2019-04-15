@@ -13,8 +13,8 @@
     
     // Name of the logged in client
     $_SESSION['nom'] = "Jean Michel POKER";
-    $_SESSION['role'] = "I'm the CEO, biatch";
-    $_SESSION['description'] = "Coucou c'est moi !<br>Voilà ma description !";
+    $_SESSION['role'] = "CEO";
+    $_SESSION['description'] = "Reponsable!";
 ?>
 
 
