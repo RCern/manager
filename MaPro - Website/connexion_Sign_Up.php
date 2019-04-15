@@ -73,7 +73,7 @@
                                 
                         <br><br>
                         
-                        <h4 class="center">Please enter at least 8 characters for your password :)</h4>
+                        <h4 class="center blueLight">Please enter at least 8 characters for your password :)</h4>
 
                         <!-- Password -->
                         <div class="row">

@@ -4,3 +4,7 @@
     font-family: Comfortaa;
 }
 
+.nav, .navbar-fixed, .nav-wrapper
+{
+    color:black  !important;
+}

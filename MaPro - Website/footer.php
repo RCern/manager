@@ -25,11 +25,11 @@
                         <a class="aBig whiteToBlueLight tooltip" href="mailto:raducern@gmail.com">raduCern@gmail.com
                             <span class="tooltiptext">Click on me to send a mail !</span>
                         </a>
-                    </h6>
+                    </h6>   
 
                     <br>
                     
-                    <h6 class="white-text">Our School : <a class="aBig whiteToBlueLight" target="_blank" rel="noopener noreferrer" href="https://www.efrei.fr/">https://www.efrei.fr/</a> </h6>
+                    <h6 class="white-text">Our School : <a class="aBig whiteToBlueLight" target="_blank" rel="noopener noreferrer" href="https://www.efrei.fr">https://www.efrei.fr</a> </h6>
                 </ul>
             </div>
 
@@ -40,6 +40,7 @@
         <div class="container">
             © 2019 Copyright MaPro
         </div>
+        
     </div>
 
 </footer>

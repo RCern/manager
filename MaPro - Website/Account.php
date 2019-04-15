@@ -11,8 +11,10 @@
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
     
-    // Max length for a row of cards
-    $_SESSION['Nom'] = "Jean Michel POKER";
+    // Name of the logged in client
+    $_SESSION['nom'] = "Jean Michel POKER";
+    $_SESSION['role'] = "I'm the CEO, biatch";
+    $_SESSION['description'] = "Coucou c'est moi !<br>Voilà ma description !";
 ?>
 
 
@@ -22,7 +24,6 @@
     <link rel="stylesheet" href="css/general.css"/>
     <link rel="stylesheet" href="css/fontComfortaa.css"/>
     <link rel="stylesheet" href="css/projetCard.css"/>
-    <link rel="stylesheet" href="css/tooltip.css"/>
     <link rel="stylesheet" href="css/backpage.css"/>
 
 
@@ -34,7 +35,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["Nom"]; ?> </title>
+    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
 
 
     <head>
@@ -68,17 +69,29 @@
 
         <main>
 
-        <!-- CARD TEST -->
-            <div class="container center grey darken-3">
-                <br>
-                <h1 class="whiteToBlueLight"> White To Blue Light !</h1>
-                <br><br>
-                <h1 class="whiteToBlueDeep"> White To Blue Deep !</h1>
-                <br><br>
-                <h1 class="BlueLightToBlueDeep"> Blue Light To Blue Deep !</h1>
-                <br>
+        <br>
+        
+            <!-- DISPLAY THE EMPLOYEE'S DATA -->
+            <div class="container">
+                <div class="card-panel grey lighten-3">
+                    <div class="row valign-wrapper">
+                        <div class="col s3">
+                            <img src="pictures/logo.png" alt="" class="circle responsive-img">
+                        </div>
+
+                        <div class="col s9 center" style="font-family: Comfortaa">
+                            <h1 class="blueDeep"> <?php echo $_SESSION['nom']; ?> </h1>
+                            <h3 class="blueLight"> <?php echo $_SESSION['role']; ?> </h3>
+                            <br>
+                            <h5 class="black-text"> <?php echo $_SESSION['description']; ?> </h5>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <br><br>
+
+            <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
 
                 <?php
@@ -117,6 +130,10 @@
 
                             case 8:
                                 addProjectCard("Pokemon Sword and Shield", "Nintendo", "15 Novembre 2019", rand(1, 100), rand(1, 3));
+                            break;
+
+                            default:
+                                addProjectCard("Titleless", "Leaderless", "dateless", 0, 3);
                             break;
                         }
                     }
@@ -157,9 +174,16 @@
       <div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">
       ';
 
+      
     if($priority == 1) echo '<div class="card smallZoom red   lighten-1">';
     if($priority == 2) echo '<div class="card smallZoom blue  lighten-1">';
     if($priority == 3) echo '<div class="card smallZoom green lighten-1">';
+    
+    /*
+    if($priority == 1) echo '<div class="card smallZoom blue darken-3">';
+    if($priority == 2) echo '<div class="card smallZoom blue">';
+    if($priority == 3) echo '<div class="card smallZoom blue lighten-3">';
+    */
 
       echo '
                     <div class="card-content">
@@ -178,10 +202,11 @@
                     <div class="card-action">
                         <h5 style="color: inherit"> ' . $percentage . ' % <h5>
 
-                        <div class="container progress">
-                            <div class="determinate" style="width: ' . $percentage . '%"></div>
+                        <div class="container progress grey darken-4">
+                            <div class="determinate white" style="width: ' . $percentage . '%"></div>
                         </div>
                     </div>
+                    
                     <br>
 
                 </div>

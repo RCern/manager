@@ -54,14 +54,12 @@
       
     <!-- Main Image + Informative text -->
       <div id="index-banner" class="parallax-container" style="height: 90%">
-        <div class="overlay section no-pad-bot">
-          <div class="container" style="display: inline-block">
-            <div class="parallax"><img src="pictures/jean.jpg" alt="Unsplashed background img 1"></div>
+        <div class="overlay">
+          <div class="parallax"><img src="pictures/jean.jpg" alt="Unsplashed background img 1"></div>
 
-              <h1 class="blueLight" style="font-weight:bold">GROS TITRE T'AS VU</h1>
-              <h3>Là on met du texte, du coup ça rend bien</h3>
+            <h1 class="blueLight" style="font-weight:bold;">GROS TITRE T'AS VU</h1>
+            <h3>Là on met du texte, du coup ça rend bien</h3>
 
-            </div>
           </div>
         </div>
       </div>
@@ -103,8 +101,8 @@
       </div>
 
       <div class="col s5">
-        <h1>In-depth Presentation</h1>
-        <h2>yea, homie</h2>
+        <h1 class="center blueDeep">In-depth Presentation</h1>
+        <h2 class="center blueLight">yea, homie</h2>
         <h5>Here's a shitload of content we will to write in order to fill up this content. cool, isn't it ?</h5>
         <?php blablabla(10); ?>
       </div>
@@ -121,7 +119,7 @@
   <!--   Information Collapsible (Accordeon)   -->
 
       <div class="container center">
-        <h1>Any question ?<br>Here's the FAQ</h1><br>
+        <h1 class="blueDeep">Any question ?<br>Here's the FAQ</h1><br>
         <ul class="collapsible">
           <?php
             addCollapsible("How can MaPro help my team ?", "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.");
@@ -138,8 +136,8 @@
   <!--   Team Presentation   -->
       <div class="container center">
 
-        <h1>Introducing our team</h1>
-        <h4>5 wonderful lovely people ._.</h4><br>
+        <h1 class="blueDeep">Introducing our team</h1>
+        <h4 class="blueLight">5 wonderful lovely people ._.</h4><br>
 
         <?php
           echo '<div class="row">';
@@ -194,8 +192,8 @@
     echo '
       <div class="col s12 m4">
         <div class="icon-block center smallZoom">
-          <h1><i class="large material-icons zoom">' . $icon . '</i></h1>
-          <h4>' . $title . '</h4>
+          <h1><i class="large material-icons zoom blueDeep">' . $icon . '</i></h1>
+          <h4 class="blueLight">' . $title . '</h4>
           <h6 class="flow-text homepageIconRow">' . $description . '</h6>
         </div>
       </div>

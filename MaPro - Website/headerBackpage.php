@@ -3,10 +3,11 @@
 
 
 <!-- HEADER -->
-<div class="navbar-fixed darkBackground">
-    <nav>
+<div class="navbar-fixed">
+    <nav class="darkBackground">
         <div class="nav-wrapper">
-            <a href="homepage.php" class="brand-logo whiteToBlueDeep zoom" style="font-weight: bold">MaPro</a>
+            <a href="homepage.php" class="brand-logo whiteToBlueLight zoom" style="font-weight: bold">MaPro</a>
+
 
             <!-- Component that calls the side-menu when the window is reduced -->
             <a href="#" class="sidenav-trigger hide-on-large-only zoom whiteToBlueLight" data-target="mobile-links">
@@ -15,13 +16,13 @@
 
             <!-- Links -->
             <ul class="right hide-on-med-and-down">
-                <li><a class="whiteToBlueDeep dropdown-trigger smallZoom" href="#!" data-target="dropdown1">
+                <li><a class="whiteToBlueLight dropdown-trigger smallZoom" href="#!" data-target="dropdown1">
                     <i class="material-icons left">arrow_drop_down</i>
                     Project's display</a>
                 </li>
-                <li><a class="whiteToBlueDeep smallZoom" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="whiteToBlueDeep smallZoom" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                <li><a class="whiteToBlueDeep smallZoom" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
+                <li><a class="whiteToBlueLight smallZoom" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
+                <li><a class="whiteToBlueLight smallZoom" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
+                <li><a class="whiteToBlueLight smallZoom" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
                 <li>
                     <form>
                         <div class="input-field smallZoom">
@@ -56,12 +57,14 @@
 
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Cards</a></li>
+                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Big Cards</a></li>
+                <li><a href="#!"><i class="small material-icons left" style="font-size: 20px">sim_card_alert</i>Small Cards</a></li>
                 <li class="divider"></li>
                 <li><a href="#!"><i class="material-icons left">view_list</i>List</a></li>
             </ul>
             <ul id="dropdown2" class="dropdown-content">
-                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Cards</a></li>
+                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Big Cards</a></li>
+                <li><a href="#!"><i class="small material-icons left" style="font-size: 20px">sim_card_alert</i>Small Cards</a></li>
                 <li class="divider"></li>
                 <li><a href="#!"><i class="material-icons left">view_list</i>List</a></li>
             </ul>
