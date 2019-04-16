@@ -6,7 +6,7 @@
     $_SESSION['length'] = 0;
  
     // size taken by a card
-    $_SESSION['size'] = 3;
+    if( !isset($_SESSION['size']) ) $_SESSION['size'] = 3;
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
@@ -14,7 +14,7 @@
     // Name of the logged in client
     $_SESSION['nom'] = "Jean Michel POKER";
     $_SESSION['role'] = "CEO";
-    $_SESSION['description'] = "Reponsable!";
+    $_SESSION['description'] = "Reponsable !";
 ?>
 
 
@@ -72,24 +72,11 @@
         <br>
         
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <div class="container">
-                <div class="card-panel grey lighten-3">
-                    <div class="row valign-wrapper">
-                        <div class="col s3">
-                            <img src="pictures/logo.png" alt="" class="circle responsive-img">
-                        </div>
+            <?php  addEmployeeCard($_SESSION['nom'], $_SESSION['role'], $_SESSION['description']); ?>
 
-                        <div class="col s9 center" style="font-family: Comfortaa">
-                            <h1 class="blueDeep"> <?php echo $_SESSION['nom']; ?> </h1>
-                            <h3 class="blueLight"> <?php echo $_SESSION['role']; ?> </h3>
-                            <br>
-                            <h5 class="black-text"> <?php echo $_SESSION['description']; ?> </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <br><br>
+
 
             <!-- ADDING THE DISPLAYS BUTTONS -->
             <div class="container row center">
@@ -113,6 +100,10 @@
                 </div>
 
             </div>
+
+
+            <br><br>
+
 
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
@@ -140,6 +131,14 @@
                     $conn->close();
                 ?>
 
+
+
+                <!-- THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display) -->
+                <!-- DO NOT DELETE FOR THE MOMENT !!! -->
+                <?php
+                    for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
+                ?>
+
             </div>
 
         </main>
@@ -150,42 +149,64 @@
 
 
 <?php
-  function addProjectCard($title, $leader, $date, $percentage, $priority)
-  {
-      // We verify if we need to end the Row
-      if($_SESSION['length'] >= $_SESSION['MAX'])
-      {
+    function addEmployeeCard($nom, $role, $description)
+    {
+        echo '
+            <div class="container">
+                <div class="card-panel grey lighten-3">
+                    <div class="row valign-wrapper">
+                        <div class="col s3">
+                            <img src="pictures/logo.png" alt="" class="circle responsive-img">
+                        </div>
+
+                        <div class="col s9 center" style="font-family: Comfortaa">
+                            <h1 class="blueDeep"> ' . $nom . ' </h1>
+                            <h3 class="blueLight"> ' .  $role . ' </h3>
+                            <br>
+                            <h5 class="black-text"> ' . $description . ' </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ';
+    }
+
+    function addProjectCard($title, $leader, $date, $percentage, $priority)
+    {
+        // We verify if we need to end the Row
+        if($_SESSION['length'] >= $_SESSION['MAX'])
+        {
         $_SESSION['length'] = 0;
-          echo '</div>';
-      }
+            echo '</div>';
+        }
 
-      
-      // We verify if we need to create a new Row (IN THIS ORDER !!!)
-      if($_SESSION['length'] == 0)
-      {
+        
+        // We verify if we need to create a new Row (IN THIS ORDER !!!)
+        if($_SESSION['length'] == 0)
+        {
         echo '<div class="row">';
-      }
+        }
 
-      
-      // Now we add the card
-      $_SESSION['length'] += $_SESSION['size'];
+        
+        // Now we add the card
+        $_SESSION['length'] += $_SESSION['size'];
 
-      echo '
-      <div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">
-      ';
+        echo '
+        <div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">
+        ';
 
-      
+        
     if($priority == 1) echo '<div class="card smallZoom red   lighten-1">';
     if($priority == 2) echo '<div class="card smallZoom blue  lighten-1">';
     if($priority == 3) echo '<div class="card smallZoom green lighten-1">';
-    
+
     /*
     if($priority == 1) echo '<div class="card smallZoom blue darken-3">';
     if($priority == 2) echo '<div class="card smallZoom blue">';
     if($priority == 3) echo '<div class="card smallZoom blue lighten-3">';
     */
 
-      echo '
+        echo '
                     <div class="card-content">
 
                         <a class="card-title" style="font-weight: bold;color: inherit;" href="project.php?ID='. rand(1, 100) .'">' . $title . '</a>
@@ -211,6 +232,6 @@
 
                 </div>
             </div>
-      ';
-  }
+        ';
+    }
 ?>
