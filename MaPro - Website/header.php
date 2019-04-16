@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/general.css"/>
 <link rel="stylesheet" href="css/headerFooter.css"/>
 <link rel="stylesheet" href="css/frontpageH.css"/>
 

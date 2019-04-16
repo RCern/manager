@@ -16,10 +16,6 @@
 
             <!-- Links -->
             <ul class="right hide-on-med-and-down">
-                <li><a class="whiteToBlueLight dropdown-trigger smallZoom" href="#!" data-target="dropdown1">
-                    <i class="material-icons left">arrow_drop_down</i>
-                    Project's display</a>
-                </li>
                 <li><a class="whiteToBlueLight smallZoom" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
                 <li><a class="whiteToBlueLight smallZoom" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
                 <li><a class="whiteToBlueLight smallZoom" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
@@ -37,10 +33,6 @@
 
             <!-- Side-menu for when the window is reduced -->
             <ul class="sidenav" id="mobile-links">
-                <li><a class="blueLightToBlueDeep dropdown-trigger" href="#!" data-target="dropdown2">
-                    <i class="material-icons left">arrow_drop_down</i>
-                    Project's display</a>
-                </li>
                 <li><a class="blueLightToBlueDeep" href="#"><i class="material-icons left">account_circle</i>My Profile</a></li>
                 <li><a class="blueLightToBlueDeep" href="#"><i class="material-icons left">add_to_photos</i>New Project</a></li>
                 <li><a class="blueLightToBlueDeep" href="#"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
@@ -53,20 +45,6 @@
                         </div>
                     </form>
                 </li>
-            </ul>
-
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Big Cards</a></li>
-                <li><a href="#!"><i class="small material-icons left" style="font-size: 20px">sim_card_alert</i>Small Cards</a></li>
-                <li class="divider"></li>
-                <li><a href="#!"><i class="material-icons left">view_list</i>List</a></li>
-            </ul>
-            <ul id="dropdown2" class="dropdown-content">
-                <li><a href="#!"><i class="material-icons left">sim_card_alert</i>Big Cards</a></li>
-                <li><a href="#!"><i class="small material-icons left" style="font-size: 20px">sim_card_alert</i>Small Cards</a></li>
-                <li class="divider"></li>
-                <li><a href="#!"><i class="material-icons left">view_list</i>List</a></li>
             </ul>
             
         </div>

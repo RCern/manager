@@ -91,30 +91,54 @@
 
             <br><br>
 
+            <!-- ADDING THE DISPLAYS BUTTONS -->
+            <div class="container row center">
+
+                <div class="col s4">
+                    <a class="zoom btn-large waves-effect waves-light">
+                        <i class="material-icons left">sim_card_alert</i> Big Cards
+                    </a>
+                </div>
+
+                <div class="col s4">
+                    <a class="zoom btn-large waves-effect waves-light ">
+                        <i class="material-icons left">sim_card_alert</i> Small Cards
+                    </a>
+                </div>
+
+                <div class="col s4">
+                    <a class="zoom btn-large waves-effect waves-light">
+                        <i class="material-icons left">view_list</i> List
+                    </a>
+                </div>
+
+            </div>
+
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
 
                <?php
+                    require_once('connectdb.php');
+                    $conn = connect();
 
-
-            require_once('connectdb.php');
-            $conn = connect();
-
-            $sql = "SELECT P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
-            $result = $conn->query($sql);
-            $i = 0;
-            if ($result->num_rows > 0) {
-              while($row[] = $result->fetch_assoc()) {
-                  
-                  addProjectCard($row[$i]["name"],$row[$i]["Tname"],$row[$i]["deadline"],$row[$i]["percentageDone"],$row[$i]["priority"]);
-                  $i++;
-        }
-          
-    } else {
-        echo "EMPTY DATABASE";
-    }
-    $conn->close();
- ?>
+                    $sql = "SELECT P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+                    $result = $conn->query($sql);
+                    
+                    if ($result->num_rows > 0)
+                    {
+                        $i = 0;
+                        while($row[] = $result->fetch_assoc())
+                        {                  
+                            addProjectCard($row[$i]["name"],$row[$i]["Tname"],$row[$i]["deadline"],$row[$i]["percentageDone"],$row[$i]["priority"]);
+                            $i++;
+                        }
+                    }
+                    else
+                    {
+                        echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
+                    }
+                    $conn->close();
+                ?>
 
             </div>
 

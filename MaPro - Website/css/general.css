@@ -112,3 +112,9 @@ a.aBig:active
     visibility: visible;
     opacity: 1;
 }
+
+/* Button */
+.btn, .btn-large { background:#213B6B; }
+.btn:hover, .btn-large:hover { background:#5098D9; }
+
+.bigger {size:150%; }
