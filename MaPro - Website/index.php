@@ -1,4 +1,4 @@
 <?php
-     // require 'homepage.php';
-     require 'Account.php';
+     require 'homepage.php';
+     // require 'Account.php';
 ?>

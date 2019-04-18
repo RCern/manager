@@ -3,6 +3,8 @@
     font-family: Comfortaa;
 }
 
+
+
 /* Big a */
 a.aBig:link
 {
@@ -42,6 +44,7 @@ a.aBig:active
 .blueLightToBlueDeep:hover { color:#213B6B; }
 
 
+
 /* Zooms when hovering */
 .zoom,.smallZoom { transition: transform .2s; }
 .zoom:hover { transform: scale(1.2); }
@@ -64,6 +67,7 @@ a.aBig:active
 .fa-lg:hover { color:#213B6B; }
 
 
+
 /* Overlay */
 .overlay
 {
@@ -77,6 +81,7 @@ a.aBig:active
   display: inline-block;
   vertical-align: middle;
 }
+
 
 
 /* Tooltip */
@@ -113,8 +118,16 @@ a.aBig:active
     opacity: 1;
 }
 
+
+
 /* Button */
 .btn, .btn-large { background:#213B6B; }
 .btn:hover, .btn-large:hover { background:#5098D9; }
 
-.bigger {size:150%; }
+
+
+/* Navbar */
+nav
+{
+    padding: 0px 25px;
+}

@@ -6,7 +6,7 @@
 <div class="navbar-fixed">
     <nav class="darkBackground">
         <div class="nav-wrapper">
-            <a href="homepage.php" class="brand-logo whiteToBlueLight zoom" style="font-weight: bold">MaPro</a>
+            <a href="homepage.php" class="brand-logo whiteToBlueLight zoom">MaPro</a>
 
 
             <!-- Component that calls the side-menu when the window is reduced -->
@@ -60,6 +60,5 @@
     $(document).ready(function()
     {
         $('.sidenav').sidenav();
-        $(".dropdown-trigger").dropdown();
     });
 </script>

@@ -5,8 +5,9 @@
     // length currently occupied by the last row of cards
     $_SESSION['length'] = 0;
  
-    // size taken by a card
+    // size taken by a card (its initial value is 3)
     if( !isset($_SESSION['size']) ) $_SESSION['size'] = 3;
+    $_SESSION['size'] = 3;
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
@@ -78,32 +79,36 @@
             <br><br>
 
 
-            <!-- ADDING THE DISPLAYS BUTTONS -->
-            <div class="container row center">
+              <!-- Dropdowns  -->
+              <div class="container row center">
+                <div class="col s2"></div>
 
                 <div class="col s4">
-                    <a class="zoom btn-large waves-effect waves-light">
-                        <i class="material-icons left">sim_card_alert</i> Big Cards
-                    </a>
+                    <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
+
+                    <!-- Dropdown Display -->
+                    <ul id='dropdownDisplay' class='dropdown-content'>
+                        <li><a href="#!"><i class="material-icons">sim_card_alert</i> Big Cards</a></li>
+                        <li><a href="#!"><i class="material-icons">sim_card_alert</i> Small Cards</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!"><i class="material-icons">view_list</i> List</a></li>
+                    </ul>
                 </div>
 
                 <div class="col s4">
-                    <a class="zoom btn-large waves-effect waves-light ">
-                        <i class="material-icons left">sim_card_alert</i> Small Cards
-                    </a>
+                    <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
+
+                    <!-- Dropdown Search -->
+                    <ul id='dropdownSearch' class='dropdown-content'>
+                        <li><a href="#!"><i class="material-icons">title</i>Title</a></li>
+                        <li><a href="#!"><i class="material-icons">report</i>Priority</a></li>
+                        <li><a href="#!"><i class="material-icons">timeline</i>Completion</a></li>
+                        <li><a href="#!"><i class="material-icons">supervisor_account</i>Leader</a></li>
+                    </ul>
                 </div>
 
-                <div class="col s4">
-                    <a class="zoom btn-large waves-effect waves-light">
-                        <i class="material-icons left">view_list</i> List
-                    </a>
-                </div>
-
+                <div class="col s2"></div>
             </div>
-
-
-            <br><br>
-
 
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
@@ -114,7 +119,8 @@
 
                     $sql = "SELECT P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
                     $result = $conn->query($sql);
-                    
+
+
                     if ($result->num_rows > 0)
                     {
                         $i = 0;
@@ -188,23 +194,36 @@
         }
 
         
-        // Now we add the card
+        // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
+        echo '<div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">';
 
-        echo '
-        <div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">
-        ';
 
-        
-    if($priority == 1) echo '<div class="card smallZoom red   lighten-1">';
-    if($priority == 2) echo '<div class="card smallZoom blue  lighten-1">';
-    if($priority == 3) echo '<div class="card smallZoom green lighten-1">';
+        // According to the priority, we create a card of a given color
+        switch($priority)
+        {
+            case 1:
+                echo '<div class="card smallZoom red lighten-1">';
+            break;
 
-    /*
-    if($priority == 1) echo '<div class="card smallZoom blue darken-3">';
-    if($priority == 2) echo '<div class="card smallZoom blue">';
-    if($priority == 3) echo '<div class="card smallZoom blue lighten-3">';
-    */
+            case 2:
+                echo '<div class="card smallZoom blue lighten-1">';
+            break;
+
+            case 3:
+                echo '<div class="card smallZoom green lighten-1">';
+            break;
+
+            default:
+                echo '<div class="card smallZoom pink darken-1">';
+            break;
+        }
+
+        /*
+        if($priority == 1) echo '<div class="card smallZoom blue darken-3">';
+        if($priority == 2) echo '<div class="card smallZoom blue">';
+        if($priority == 3) echo '<div class="card smallZoom blue lighten-3">';
+        */
 
         echo '
                     <div class="card-content">
@@ -218,7 +237,10 @@
 
                         <br><br>
                         <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
+                        
                     </div>
+
+
 
                     <div class="card-action">
                         <h5 style="color: inherit"> ' . $percentage . ' % <h5>
@@ -235,3 +257,14 @@
         ';
     }
 ?>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $('.dropdown-trigger').dropdown();
+    });
+</script>

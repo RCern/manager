@@ -1,0 +1,10 @@
+- Ajouter une variable $_SESSION pour savoir si quelqu'un est connecté ou non 
+(ou sinon, si elle existe, mettre $_SESSION['ID'] à -1 si personne n'est connecté)
+
+- créer une page Logout (je m'occuperai de l'affichage, si besoin)
+
+- Gérer l'affichage sur la page Account.php
+    -> affichage en carte ou en liste ; trier par type ...
+    je m'occuperai du css des listes
+
+- Mettre Logo dans Navbar (si quelqu'un réussit)
