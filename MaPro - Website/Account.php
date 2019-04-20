@@ -27,15 +27,7 @@
     <link rel="stylesheet" href="css/backpage.css"/>
 
 
-    <style>
-        #page
-        {
-            margin:0px;
-        }
-    </style>
-
-
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - My Account</title>
 
 
     <head>
@@ -69,7 +61,19 @@
 
         <main>
 
-        <br>        
+            <br>
+
+            <!-- DISPLAY THE LOG OUT BUTTON -->
+            <div class="container">
+                <a class="zoom btn waves-light right red lighten-1" href='disconnect.php'>
+                    <i class="material-icons left">exit_to_app</i> Log out
+                </a>
+            </div>
+
+
+            <br><br>
+
+
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
             <?php  addEmployeeCard($_SESSION['username'], $_SESSION['role'], $_SESSION['description']); ?>
 
@@ -77,8 +81,8 @@
             <br><br>
 
 
-              <!-- Dropdowns  -->
-              <div class="container row center">
+            <!-- Dropdowns  -->
+            <div class="container row center">
                 <div class="col s2"></div>
 
                 <div class="col s3">
@@ -139,14 +143,10 @@
                         echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
                     }
                     $conn->close();
-                ?>
 
-
-
-                <!-- THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display) -->
-                <!-- DO NOT DELETE FOR THE MOMENT !!! -->
-                <?php
-                    for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
+                    // THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display)
+                    // DO NOT DELETE FOR THE MOMENT !!!
+                    for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));
                 ?>
 
             </div>
@@ -186,7 +186,7 @@
         // We verify if we need to end the Row
         if($_SESSION['length'] >= $_SESSION['MAX'])
         {
-        $_SESSION['length'] = 0;
+            $_SESSION['length'] = 0;
             echo '</div>';
         }
 
@@ -200,7 +200,8 @@
         
         // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
-        echo '<div class="col s'. $_SESSION['size'] .' whiteToBlueDeep">';
+        echo '<div class="col s'. $_SESSION['size'] .'">';
+        echo '<a class="aCard whiteToBlueDeep" href="project.php?ID=' . rand(0, 100) . '">';
 
 
         // According to the priority, we create a card of a given color
@@ -237,38 +238,35 @@
         
         // The rest of the card-code
         echo '
-                    <div class="card-content">
+                        <div class="card-content">
 
-                        <a class="card-title" style="font-weight: bold;color: inherit;" href="project.php?ID='. rand(1, 100) .'">' . $title . '</a>
-                        <br><br>
-                        <h5>Directed by :<br></h5>
-                        <a class="whiteToBlueDeep tooltip" href="#">' . $leader . '
-                            <span class="tooltiptext center"><i class="material-icons left">account_circle</i>' . $leader . ' + insert content</span>
-                        </a>
+                            <div class="card-title" style="font-weight: bold;color: inherit;">' . $title . '</div>
+                            <br><br>
+                            <h5>Directed by :<br></h5>
+                            <div class="whiteToBlueDeep tooltip" href="#">' . $leader . '</div>
 
-                        <br><br>
-                        <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
-                        
-                    </div>
-
-
-                    <div class="card-action">
-                        <h5 style="color: inherit"> ' . $percentage . ' % <h5>
-
-                        <div class="container progress grey darken-4">
-                            <div class="determinate white" style="width: ' . $percentage . '%"></div>
+                            <br><br>
+                            <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
+                            
                         </div>
-                    </div>
-                    
-                    <br>
 
+
+                        <div class="card-action">
+                            <h5 style="color: inherit"> ' . $percentage . ' % <h5>
+
+                            <div class="container progress grey darken-4">
+                                <div class="determinate white" style="width: ' . $percentage . '%"></div>
+                            </div>
+                        </div>
+                        
+                        <br>
+
+                    </div>
                 </div>
-            </div>
+            </a>
         ';
     }
 ?>
-
-
 
 
 <!-- Compiled and minified JavaScript -->
@@ -280,3 +278,33 @@
         $('.dropdown-trigger').dropdown();
     });
 </script>
+
+<style>
+    .aCard:link
+    {
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .aCard:visited
+    {
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .aCard:hover,.aCard:hover
+    {
+        background-color: transparent;
+    }
+    .aCard:active
+    {
+        background-color: transparent;
+    }
+</style>
+
+<?php
+    /* OLD CODE :
+    <h5>Directed by :<br></h5>
+    <div class="whiteToBlueDeep tooltip" href="#">' . $leader . '
+        <span class="tooltiptext center"><i class="material-icons left">account_circle</i>' . $leader . ' + insert content</span>
+    </div>
+    */
+?>
