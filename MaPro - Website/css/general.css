@@ -29,8 +29,6 @@ a.aBig:active
 
 
 /* Custom color */
-.darkBackground { background: #333333; }
-
 .blueDeep  { color:#213B6B; }
 .blueLight { color:#5098D9; }
 
@@ -43,6 +41,14 @@ a.aBig:active
 .blueLightToBlueDeep { color:#5098D9; }
 .blueLightToBlueDeep:hover { color:#213B6B; }
 
+
+/* Custom background */
+.darkBackground { background: #333333; }
+
+.darkToBlueDeepBackground { background: #333333; }
+.darkToBlueDeepBackground:hover { background:#213B6B; }
+.darkToBlueLightBackground { background: #333333; }
+.darkToBlueLightBackground:hover { background:#5098D9; }
 
 
 /* Zooms when hovering */

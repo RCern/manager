@@ -1,3 +1,8 @@
+<?php
+    // On démarre la session AVANT d'écrire du code HTML
+    session_start();
+?>
+
 <html lang="en">
   <link rel="icon" type="image/png" href="./pictures/logo.png"/>
 

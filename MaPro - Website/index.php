@@ -1,4 +1,3 @@
 <?php
-     require 'homepage.php';
-     // require 'Account.php';
+     header("Location: homepage.php", true, 301);
 ?>

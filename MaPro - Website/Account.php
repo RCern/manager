@@ -2,18 +2,17 @@
     // On démarre la session AVANT d'écrire du code HTML
     session_start();
 
+
     // length currently occupied by the last row of cards
     $_SESSION['length'] = 0;
  
     // size taken by a card (its initial value is 3)
     if( !isset($_SESSION['size']) ) $_SESSION['size'] = 3;
-    $_SESSION['size'] = 3;
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
     
     // Name of the logged in client
-    $_SESSION['nom'] = "Jean Michel POKER";
     $_SESSION['role'] = "CEO";
     $_SESSION['description'] = "Reponsable !";
 ?>
@@ -70,10 +69,9 @@
 
         <main>
 
-        <br>
-        
+        <br>        
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <?php  addEmployeeCard($_SESSION['nom'], $_SESSION['role'], $_SESSION['description']); ?>
+            <?php  addEmployeeCard($_SESSION['username'], $_SESSION['role'], $_SESSION['description']); ?>
 
 
             <br><br>
@@ -83,7 +81,7 @@
               <div class="container row center">
                 <div class="col s2"></div>
 
-                <div class="col s4">
+                <div class="col s3">
                     <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
 
                     <!-- Dropdown Display -->
@@ -95,7 +93,9 @@
                     </ul>
                 </div>
 
-                <div class="col s4">
+                <div class="col s2"></div>
+
+                <div class="col s3">
                     <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
 
                     <!-- Dropdown Search -->
@@ -109,6 +109,10 @@
 
                 <div class="col s2"></div>
             </div>
+            
+            
+            <br><br>
+
 
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
@@ -225,6 +229,13 @@
         if($priority == 3) echo '<div class="card smallZoom blue lighten-3">';
         */
 
+
+        // We verify if we need to add the delete button
+        /*if(  Condition verifying that the delete parameter is active  )
+            echo '<a class="btn-floating halfway-fab waves-effect waves-light darkToBlueDeepBackground"><i class="material-icons">delete</i></a>';*/
+
+        
+        // The rest of the card-code
         echo '
                     <div class="card-content">
 
@@ -239,7 +250,6 @@
                         <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
                         
                     </div>
-
 
 
                     <div class="card-action">
@@ -257,6 +267,8 @@
         ';
     }
 ?>
+
+
 
 
 <!-- Compiled and minified JavaScript -->

@@ -18,8 +18,7 @@
 
             <!-- Links -->
             <ul class="right hide-on-med-and-down">
-                <li><a class="aBig whiteToBlueLight smallZoom" href="connexion_Login.php"><i class="material-icons left">account_circle</i>Login</a></li>
-                <li><a class="aBig whiteToBlueLight smallZoom" href="connexion_Sign_Up.php"><i class="material-icons left">person_add</i>Sign up</a></li>
+                <?php addCorrectLinks(); ?>
                 <li>
                     <a class="smallZoom btn waves-effect waves-light pulse" href="/pictures/logo.png" download="MaPro">
                         <i class="material-icons left">get_app</i> Download the App' !
@@ -30,8 +29,7 @@
 
             <!-- Side-menu for when the window is reduced -->
             <ul class="sidenav" id="mobile-links">
-                <li><a class="aBig whiteToBlueLight smallZoom" href="connexion_Login.php"><i class="material-icons left">account_circle</i>Login</a></li>
-                <li><a class="aBig whiteToBlueLight smallZoom" href="connexion_Sign_Up.php"><i class="material-icons left">person_add</i>Sign up</a></li>
+                <?php addCorrectLinks(); ?>
                 <li>
                     <form>
                         <a class="smallZoom btn waves-effect waves-light pulse" href="/pictures/logo.png" download="MaPro">
@@ -56,3 +54,34 @@
         $('.sidenav').sidenav();
     });
 </script>
+
+
+
+<?php
+
+    function addCorrectLinks()
+    {
+        if( !isset($_SESSION['username']) )
+        {
+            addLink("connexion_Login.php", "account_circle", "Login");
+            addLink("connexion_Sign_Up.php", "person_add", "Sign up");
+        }
+        else
+        {
+            addLink("account.php", "account_circle", "My Account");
+            addLink("disconnect.php", "exit_to_app", "Log out");
+        }
+    }
+
+
+    function addLink($link, $icon, $text)
+    {
+        echo '
+        <li>
+            <a class="aBig whiteToBlueLight smallZoom" href="' . $link . '">
+                <i class="material-icons left">' . $icon . '</i>' . $text . '
+            </a>
+        </li>';
+    }
+
+?>
