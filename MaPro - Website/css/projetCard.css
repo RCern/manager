@@ -1,20 +1,7 @@
-/* Navbar */
-.navbar-fixed
-{
-    background: #333333;
-    font-family: Comfortaa;
-}
-
 /* Project Card */
 .card
 {
-    font-family: Comfortaa;
     text-align: center;
-}
-
-.card-content
-{
-    font-family: Comfortaa;
 }
 
 .card-title
@@ -22,7 +9,21 @@
     font-weight: bold;
 }
 
-.card-action
+.aCard:link
 {
-    font-family: Comfortaa;
+    background-color: transparent;
+    text-decoration: none;
+}
+.aCard:visited
+{
+    background-color: transparent;
+    text-decoration: none;
+}
+.aCard:hover,.aCard:hover
+{
+    background-color: transparent;
+}
+.aCard:active
+{
+    background-color: transparent;
 }

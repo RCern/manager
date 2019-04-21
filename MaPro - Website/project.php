@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
   <link rel="stylesheet" href="css/projetCard.css"/>
-  <link rel="stylesheet" href="css/backpage.css"/>
 
 
   <style>

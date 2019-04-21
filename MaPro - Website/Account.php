@@ -2,7 +2,7 @@
     // On démarre la session AVANT d'écrire du code HTML
     session_start();
 
-
+    
     // length currently occupied by the last row of cards
     $_SESSION['length'] = 0;
  
@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/general.css"/>
     <link rel="stylesheet" href="css/fontComfortaa.css"/>
     <link rel="stylesheet" href="css/projetCard.css"/>
-    <link rel="stylesheet" href="css/backpage.css"/>
 
 
     <title>MaPro - My Account</title>
@@ -147,6 +146,7 @@
                     // THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display)
                     // DO NOT DELETE FOR THE MOMENT !!!
                     for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));
+                    echo '</div';
                 ?>
 
             </div>
@@ -255,7 +255,7 @@
                             <h5 style="color: inherit"> ' . $percentage . ' % <h5>
 
                             <div class="container progress grey darken-4">
-                                <div class="determinate white" style="width: ' . $percentage . '%"></div>
+                                <div id="progress" class="determinate white" style="width: ' . $percentage . '%"></div>
                             </div>
                         </div>
                         
@@ -279,26 +279,7 @@
     });
 </script>
 
-<style>
-    .aCard:link
-    {
-        background-color: transparent;
-        text-decoration: none;
-    }
-    .aCard:visited
-    {
-        background-color: transparent;
-        text-decoration: none;
-    }
-    .aCard:hover,.aCard:hover
-    {
-        background-color: transparent;
-    }
-    .aCard:active
-    {
-        background-color: transparent;
-    }
-</style>
+
 
 <?php
     /* OLD CODE :
