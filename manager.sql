@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2019 at 05:02 PM
+-- Generation Time: Apr 23, 2019 at 05:16 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -41,12 +41,26 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`accountID`, `username`, `email`, `password`) VALUES
 (1, 'Albert', '', 'abc'),
-(2, 'Gregory', '', '123\r\n'),
-(3, 'Charles', '', '$2a$10$c0hm8qiKIlNMoNyLiGbZz.C7NIRbieUV/w2dXlUWgS2t.1RBXFyKO'),
-(4, 'Radu', 'r@c.fr', '12345678'),
-(5, 'Radu Cernaianu', 'radu@cernaianu.fr', '12345678'),
-(6, '12345678', '12345678@c.fr', '12345678'),
-(7, 'tokenTest', 't@t.fr', '12345678');
+(2, 'Gregory', '', '123\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accountemployee`
+--
+
+CREATE TABLE `accountemployee` (
+  `accountID` int(11) NOT NULL,
+  `employeeID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+--
+-- Dumping data for table `accountemployee`
+--
+
+INSERT INTO `accountemployee` (`accountID`, `employeeID`) VALUES
+(1, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -152,9 +166,8 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`projectID`, `name`, `hours_allocated`, `deadline`, `revenus`, `costs`, `priority`, `percentageDone`, `Description`) VALUES
-(1, 'firstproject', 40, '2019-03-15', 1000000, 500000, 1, 50, ''),
-(2, 'Transverse', 100, '2019-05-18', 0, 0, 2, 75, 'oikgbkidgvbkneqskfn'),
-(3, 'z', 1, '2019-04-30', 1, 1, 5, 0, ' ');
+(1, 'First Project', 40, '2019-04-28', 1000000, 500000, 5, 42, ''),
+(2, 'Transverse', 100, '2019-05-18', 0, 0, 2, 75, 'oikgbkidgvbkneqskfn');
 
 -- --------------------------------------------------------
 
