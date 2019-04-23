@@ -60,7 +60,13 @@
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        
+        <!-- Add tabulator -->
+        <link href="dist/css/tabulator.min.css" rel="stylesheet">
+        <link href="css/tabOver.css" rel="stylesheet">
+        <script type="text/javascript" src="dist/js/tabulator.min.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 
     </head>
 
@@ -103,7 +109,7 @@
                         <li><a href="#!" id="bigCard" onclick="bigCards();"><i class="material-icons">sim_card_alert</i> Big Cards</a></li>
                         <li><a href="#!" id="smallCard" onclick="smallCards();"><i class="material-icons">sim_card_alert</i> Small Cards</a></li>
                         <li class="divider" tabindex="-1"></li>
-                        <li><a href="#!"><i class="material-icons">view_list</i> List</a></li>
+                        <li><a href="#!" id="listShow" onclick="listShow()"><i class="material-icons">view_list</i> List</a></li>
                     </ul>
                 </div>
                 <script src="js/account.js"></script>
@@ -124,7 +130,7 @@
 
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
-
+                <div id="tabs">
                <?php
                     require_once('connectdb.php');
                     $conn = connect();
@@ -156,9 +162,9 @@
                 <?php
                     for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
                 ?>
-
+                </div>
             </div>
-
+            <br><br>
         </main>
     </body>
 
