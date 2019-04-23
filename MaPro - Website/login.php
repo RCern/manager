@@ -15,7 +15,20 @@
 	
 	if($result->num_rows == 1)
 	{
+
+		$row = $result->fetch_assoc();
+		$accID =  $row["accountID"];
+
+		$sql = "SELECT name, type, employeeID from employee where accountID = '$accID'";
+		$result = $conn->query($sql);
+
+		$row2 = $result->fetch_assoc();
+
+
 		$_SESSION['username'] = $username;
+		$_SESSION['nom'] = $row2["name"];
+		$_SESSION['role'] = $row2["type"];
+		$_SESSION['description'] = $row2["employeeID"];
 	 	echo "done";
 	}
 	else
