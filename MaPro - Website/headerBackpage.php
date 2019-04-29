@@ -6,7 +6,7 @@
 <div class="navbar-fixed">
     <nav class="darkBackground">
         <div class="nav-wrapper">
-            <a href="homepage.php" class="brand-logo whiteToBlueLight zoom" style="font-weight: bold"><img style="height: 80%; top: 50%;transform: translateY(+14%); " src="https://cdn.discordapp.com/attachments/537347312133865493/552111286197026836/Logo_Full.png"></a>
+            <a href="homepage.php" class="brand-logo whiteToBlueLight zoom" style="font-weight: bold"><img style="height: 80%; top: 50%;transform: translateY(+14%); " src="pictures/LogoFull.png"></a>
 
 
             <!-- Component that calls the side-menu when the window is reduced -->

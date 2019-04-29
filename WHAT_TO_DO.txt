@@ -1,10 +1,20 @@
-- Ajouter une variable $_SESSION pour savoir si quelqu'un est connecté ou non 
-(ou sinon, si elle existe, mettre $_SESSION['ID'] à -1 si personne n'est connecté)
+		LISTE DES TRUCS A FAIRE
+
+
+LOGIN.PHP
+- corriger le Login : pourquoi doit-on remplir 2 fois le formulaire ?
+
+
+
+ACCOUNT.PHP
+- Lier les dropdowns pour gérer l'affichage (petite / grande carte, liste) et le tri des projets (nom, type...)
+- Changer la façon d'arriver de la page ACCOUNT.PHP vers la page PROJECT.PHP
+
+
+
+PROJECT.PHP
 
 - créer une page Logout (je m'occuperai de l'affichage, si besoin)
 
-- Gérer l'affichage sur la page Account.php
-    -> affichage en carte ou en liste ; trier par type ...
-    je m'occuperai du css des listes
 
 - Mettre Logo dans Navbar (si quelqu'un réussit)

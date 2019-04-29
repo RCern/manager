@@ -1,5 +1,4 @@
 <?php 
-session_start();
+	session_start();
 	$_SESSION['size'] = $_POST['sizes'];
-	echo $_SESSION['size'];
  ?>
