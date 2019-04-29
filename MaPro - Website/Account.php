@@ -97,8 +97,8 @@
             <br><br>
 
 
-              <!-- Dropdowns  -->
-              <div class="container row center">
+            <!-- Dropdowns  -->
+            <div class="container row center">
                 <div class="col s2"></div>
 
                 <div class="col s4">
@@ -130,6 +130,10 @@
                 <div class="col s2"></div>
             </div>
 
+
+            <br><br>
+
+
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
                 <div id="tabs">
@@ -137,7 +141,7 @@
                     require_once('connectdb.php');
                     $conn = connect();
 
-                    $sql = "SELECT P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+                    $sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
                     $result = $conn->query($sql);
 
 
@@ -146,7 +150,7 @@
                         $i = 0;
                         while($row[] = $result->fetch_assoc())
                         {                  
-                            addProjectCard($row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
+                            addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
                             $i++;
                         }
                     }
@@ -162,7 +166,7 @@
                 <!-- THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display) -->
                 <!-- DO NOT DELETE FOR THE MOMENT !!! -->
                 <?php
-                    for($i=0; $i < 10; $i++) addProjectCard("Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
+                    for($i=0; $i < 10; $i++) addProjectCard(0, "Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
                 ?>
 
                 </div>
@@ -198,7 +202,7 @@
         ';
     }
 
-    function addProjectCard($title, $leader, $date, $percentage, $priority)
+    function addProjectCard($ID, $title, $leader, $date, $percentage, $priority)
     {
         // We verify if we need to end the Row
         if($_SESSION['length'] >= $_SESSION['MAX'])
@@ -218,7 +222,7 @@
         // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
         echo '<div class="col s'. $_SESSION['size'] .'">
-                <a href="project.php?ID='. rand(1, 100) .'">';
+                <a href="project.php?ID='. $ID .'">';
 
 
         // According to the priority, we create a card of a given color
