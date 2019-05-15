@@ -33,7 +33,7 @@
     </style>
 
 
-    <title>MaPro - My Account </title>
+    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
 
 
     <head>
@@ -73,25 +73,45 @@
         <?php include 'headerBackpage.php'; ?>
 
 
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      
+      <img class="circle" src="pictures/logo.png">
+      <span class="blueDeep name"> <?php echo $_SESSION['nom'] ?> </span>
+
+      <span class="blueLight email"><?php echo $_SESSION['role'] ?> </span>
+    </div></li>
+    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
+                <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
+                <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
+                <li><a class="blueLightToBlueDeep" href="employees.php"><i class="material-icons left">face</i>Employees</a></li>
+				<li><a class="blueLightToBlueDeep" href="teams.php"><i class="material-icons left">groups</i>teams</a></li>
+                <li>
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </li>
+                <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
+
+
         <main>
 
 
         <br>
 
 
-        <!-- DISPLAY THE LOG OUT BUTTON -->
-            <div class="container">
-                <a class="zoom btn waves-light right red lighten-1" href='disconnect.php'>
-                    <i class="material-icons left">exit_to_app</i> Log out
-                </a>
-            </div>
-
-
-            <br><br>
+        
             
         
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <?php  addEmployeeCard($_SESSION['ID']); ?>
+            <?php  addEmployeeCard($_SESSION['nom'], $_SESSION['role'], $_SESSION['description']); ?>
 
 
             <br><br>
@@ -162,13 +182,6 @@
                 ?>
 
 
-
-                <!-- THIS IS JUST SOME CODE TO CREATE VIRTUAL PROJECTS (so that we can test the display) -->
-                <!-- DO NOT DELETE FOR THE MOMENT !!! -->
-                <?php
-                    for($i=0; $i < 10; $i++) addProjectCard(0, "Project n° ". $i, "No one", "not today", rand(0,100), rand(1,3));    
-                ?>
-
                 </div>
             </div>
             <br><br>
@@ -180,36 +193,8 @@
 
 
 <?php
-    function addEmployeeCard($ID)
+    function addEmployeeCard($nom, $role, $description)
     {
-         // Initializing the values
-        $nom = "John DOE";
-        $role = "employee";
-        $description = "I work here !";
-
-
-         // Establishing connection with server..
-        include "connectdb.php";
-        $conn = connect();
-    
-
-        // Find the Employee (if found, fill the blank with his data)
-        $sql = "SELECT name, type, employeeID from employee where accountID = '$ID'";
-        $result = $conn->query($sql);
-        
-        if($result->num_rows == 1)
-        {
-            $row = $result->fetch_assoc();
-            $nom = $row["name"];
-            $role = $row["type"];
-            $description = $row["name"] . " is the " . $row["type"];
-        }
-        
-        // Connection Closed.
-        $conn->close();
-
-
-        // Displaying the result
         echo '
             <div class="container">
                 <div class="card-panel grey lighten-3">
@@ -222,7 +207,7 @@
                             <h1 class="blueDeep"> ' . $nom . ' </h1>
                             <h3 class="blueLight"> ' .  $role . ' </h3>
                             <br>
-                            <h5 class="black-text"> ' . $description . ' </h5>
+                            <h5 class="black-text"> Account ID: ' . $description . ' </h5>
                         </div>
                     </div>
                 </div>

@@ -31,10 +31,20 @@
             </ul>
 
 
-            <!-- Side-menu for when the window is reduced -->
-            <ul class="sidenav" id="mobile-links">
-                <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="blueLightToBlueDeep" href="projetNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
+      
+    </nav>
+</div>
+
+<ul id="mobile-links" class="sidenav">
+    <li><div class="user-view">
+      
+      <img class="circle" src="pictures/logo.png">
+      <span class="blueDeep name"> <?php echo $_SESSION['nom'] ?> </span>
+
+      <span class="blueLight email"><?php echo $_SESSION['role'] ?> </span>
+    </div></li>
+    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
+                <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
                 <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
                 <li>
                     <form>
@@ -45,12 +55,7 @@
                         </div>
                     </form>
                 </li>
-            </ul>
-            
-        </div>
-
-    </nav>
-</div>
+  </ul>
 
 
 <!-- Compiled and minified JavaScript -->

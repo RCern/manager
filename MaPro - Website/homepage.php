@@ -236,8 +236,6 @@
     ';
   }
 ?>
-
-
 <script>
   function redirect(link)
   {

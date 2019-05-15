@@ -99,19 +99,34 @@ function listShow()
             [
             {title:"Project ID", field:"projectID", sorter:"number", width:200},
             {title:"Project Name", field:"name", sorter:"string", width:200,editor:"input"},
-            {title:"Priority", field:"priority", sorter:"number",editor:"select", editorParams:{values:["1", "2", "3", "4","5"]}},
+            {title:"Priority", field:"priority", sorter:"number",editor:"select", editorParams:{values:["1", "2", "3"]}},
             {title:"Team assigned", field:"Tname", sorter:"string", width: 200 , editor:"select",editorParams:{values: TeamNames}},
             {title:"Deadline", field:"deadline", sorter:"date", sorterParams:{format:"YYYY-MM-DD",alignEmptyValues:"top",},align:"center",editor: dateEditor},
             {title:"Progress", field:"percentageDone", formatter:"progress", sorter:"number",editor:"number", editorParams:{
         min:0,
         max:100,
-        step:1,
+
     }},
+    {title:"Delete", field:"delete", align:"center",formatter:"buttonCross", cellClick:function(e, cell){
+        var data = JSON.stringify(cell.getRow().getData());
+        console.log(data);
+        if(confirm("Are you sure you want to delete this project?")){
+         $.ajax(
+        {
+            type:'POST',
+            url:'deleteProject.php',
+            data: { obj:data},
+            success:function(response)
+            {
+                table.redraw(true);
+            }
+        }); 
+    }}},
     ], 
     cellEdited:function(cell)
     {
         var data = JSON.stringify(cell.getData());
-        console.log(data);
+
 
         $.ajax(
         {
@@ -126,4 +141,5 @@ function listShow()
         }); 
     }
 });
+
 }

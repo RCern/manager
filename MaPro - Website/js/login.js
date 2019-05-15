@@ -22,8 +22,6 @@ $(document).ready(function()
 				
 				else if(data == 'Login successful !!')
 					window.location.href = 'account.php';
-
-				alert(data);
 			});
 		}
 	});

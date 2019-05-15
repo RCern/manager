@@ -1,0 +1,18 @@
+<?php 
+	require_once('connectdb.php');
+   $conn = connect();
+
+   $sql = "SELECT E.employeeID, E.name, E.type, E.salary, T.Tname from employee as E JOIN team_employee as TE ON E.employeeID = TE.employeeID JOIN team as T ON TE.teamID = T.teamID";
+   $result = $conn->query($sql);
+   $i = 0;
+   $rows = array();
+   if ($result->num_rows > 0)
+   {
+      while($rows[] = $result->fetch_assoc())
+      {
+               
+      }
+      //array_pop($rows);
+      echo json_encode($rows);
+   }
+?>
