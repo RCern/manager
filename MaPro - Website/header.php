@@ -61,7 +61,7 @@
 
     function addCorrectLinks()
     {
-        if( !isset($_SESSION['username']) )
+        if( !isset($_SESSION['ID']) )
         {
             addLink("connexion_Login.php", "account_circle", "Login");
             addLink("connexion_Sign_Up.php", "person_add", "Sign up");

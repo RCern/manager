@@ -33,7 +33,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - My Account </title>
 
 
     <head>
@@ -91,7 +91,7 @@
             
         
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <?php  addEmployeeCard($_SESSION['nom'], $_SESSION['role'], $_SESSION['description']); ?>
+            <?php  addEmployeeCard($_SESSION['ID']); ?>
 
 
             <br><br>
@@ -180,8 +180,36 @@
 
 
 <?php
-    function addEmployeeCard($nom, $role, $description)
+    function addEmployeeCard($ID)
     {
+         // Initializing the values
+        $nom = "John DOE";
+        $role = "employee";
+        $description = "I work here !";
+
+
+         // Establishing connection with server..
+        include "connectdb.php";
+        $conn = connect();
+    
+
+        // Find the Employee (if found, fill the blank with his data)
+        $sql = "SELECT name, type, employeeID from employee where accountID = '$ID'";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows == 1)
+        {
+            $row = $result->fetch_assoc();
+            $nom = $row["name"];
+            $role = $row["type"];
+            $description = $row["name"] . " is the " . $row["type"];
+        }
+        
+        // Connection Closed.
+        $conn->close();
+
+
+        // Displaying the result
         echo '
             <div class="container">
                 <div class="card-panel grey lighten-3">

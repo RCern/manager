@@ -1,15 +1,15 @@
 <?php session_start() ?>
 <html lang="en">
-  <link rel="icon" type="image/png" href="pictures/logo.png"/>
+    <link rel="icon" type="image/png" href="pictures/logo.png"/>
 
-  <link rel="stylesheet" href="css/homepage.css"/>
-  <link rel="stylesheet" href="css/general.css"/>
-  <link rel="stylesheet" href="css/inputField.css"/>
-  <link rel="stylesheet" href="css/fontComfortaa.css"/>
-  <link rel="stylesheet" href="css/frontpageH.css"/>
+    <link rel="stylesheet" href="css/homepage.css"/>
+    <link rel="stylesheet" href="css/general.css"/>
+    <link rel="stylesheet" href="css/inputField.css"/>
+    <link rel="stylesheet" href="css/fontComfortaa.css"/>
+    <link rel="stylesheet" href="css/frontpageH.css"/>
 
 
-  <title>MaPro - Login</title>
+    <title>MaPro - Login</title>
 
 
     <head>

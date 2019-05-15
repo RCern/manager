@@ -227,8 +227,8 @@
 
             <div class="card-action social flow-text">
               <i id="github" class="icon-github"></i>
-              <a href="' . $linkGithub . '">  <i class="fa fa-lg fa-github zoom"></i></a>
-              <a href="' . $linkLinkedin . '"><i class="fa fa-lg fa-linkedin zoom"></i></a>
+              <a onclick="redirect('."'". $linkGithub   ."'". ')"> <i class="fa fa-lg fa-github zoom"></i></a>
+              <a onclick="redirect('."'". $linkLinkedin ."'". ')"> <i class="fa fa-lg fa-linkedin zoom"></i></a>
             </div>
 
           </div>
@@ -236,3 +236,11 @@
     ';
   }
 ?>
+
+
+<script>
+  function redirect(link)
+  {
+    window.open(link);
+  }
+</script>
