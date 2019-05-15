@@ -32,19 +32,17 @@ var table = new Tabulator("#teams", {
     ajaxConfig:"POST", //ajax HTTP request type
     ajaxContentType:"json", // send parameters to the server as a JSON encoded string
     paginationSize:20,
-    groupBy:["teamID"],
         columns:[
-        {title:"Team ID", field:"teamID", sorter:"number", width:200},
-        {title:"Team Name", field:"Tname", sorter:"string", width:200,editor:"input"},
-        {title:"Employee Name", field:"name", sorter:"string", width: 200 , editor:"input"},
-        {title:"Delete", field:"delete", width:100, align:"center",formatter:"buttonCross", cellClick:function(e, cell){
+        {title:"Team ID", field:"teamID", sorter:"number"},
+        {title:"Team Name", field:"Tname", sorter:"string",editor:"input"},
+        {title:"Delete", field:"delete", align:"center",formatter:"buttonCross",width:100 , cellClick:function(e, cell){
         var data = JSON.stringify(cell.getRow().getData());
         console.log(data);
-        if(confirm("Are you sure you want to delete this project?")){
+        if(confirm("Are you sure you want to delete this team?")){
          $.ajax(
         {
             type:'POST',
-            url:'deleteEmployee.php',
+            url:'deleteTeam.php',
             data: { obj:data},
             success:function(response)
             {
@@ -55,15 +53,15 @@ var table = new Tabulator("#teams", {
     ], 
     cellEdited:function(cell){
         var data = JSON.stringify(cell.getData());
-                console.log(data);
+               
 
         $.ajax({
         type:'POST',
-        url:'updateTabsE.php',
+        url:'updateTabsT.php',
         
         data: { obj:data},
         success:function(response){
-          alert(response);
+         
         }
     });
 
