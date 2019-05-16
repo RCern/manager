@@ -111,7 +111,7 @@
             
         
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <?php  addEmployeeCard($_SESSION['nom'], $_SESSION['role'], $_SESSION['description']); ?>
+            <?php  addEmployeeCard( $_SESSION['ID'] ); ?>
 
 
             <br><br>
@@ -193,8 +193,30 @@
 
 
 <?php
-    function addEmployeeCard($nom, $role, $description)
+    function addEmployeeCard($ID)
     {
+        // We initialize all values
+        $nom = "John Doe";
+        $role = "Employee";
+        $description = "Hello there !";
+
+        
+        // We search in the database the data of the employee whose ID has been given by argument
+        include "connectdb.php";
+        $conn = connect();
+        $sql = "SELECT name, type, employeeID from employee where accountID = '$ID'";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows == 1)
+        {
+            $row = $result->fetch_assoc();
+            $nom =  $row["name"];
+            $role =  $row["type"];
+            $description =  $row["name"] . " - " . $row["type"];
+        }
+
+
+        // We display all our values
         echo '
             <div class="container">
                 <div class="card-panel grey lighten-3">
@@ -207,12 +229,13 @@
                             <h1 class="blueDeep"> ' . $nom . ' </h1>
                             <h3 class="blueLight"> ' .  $role . ' </h3>
                             <br>
-                            <h5 class="black-text"> Account ID: ' . $description . ' </h5>
+                            <h5 class="black-text"> ' . $description . ' </h5>
                         </div>
                     </div>
                 </div>
             </div>
         ';
+        $conn->close(); // Connection Closed.
     }
 
     function addProjectCard($ID, $title, $leader, $date, $percentage, $priority)

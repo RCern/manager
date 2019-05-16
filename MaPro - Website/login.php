@@ -1,10 +1,7 @@
 <?php
 	session_start();
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "manager";
-	$conn = new mysqli($servername, $username, $password,$dbname); // Establishing connection with server..
+	include "connectdb.php";
+	$conn = connect();
 
 	$username=$_POST['username1']; // Fetching Values from URL.
 	$password= $_POST['password1']; // Password Encryption, If you like you can also leave sha1.
@@ -15,7 +12,6 @@
 	
 	if($result->num_rows == 1)
 	{
-
 		$row = $result->fetch_assoc();
 		$accID =  $row["accountID"];
 
@@ -23,12 +19,8 @@
 		$result = $conn->query($sql);
 
 		$row2 = $result->fetch_assoc();
-
-
-		$_SESSION['username'] = $username;
-		$_SESSION['nom'] = $row2["name"];
-		$_SESSION['role'] = $row2["type"];
-		$_SESSION['description'] = $row2["employeeID"];
+		
+		$_SESSION['ID'] = $row2["employeeID"];
 	 	echo "Login successful !!";
 	}
 	else
