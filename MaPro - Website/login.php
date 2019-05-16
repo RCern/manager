@@ -29,11 +29,11 @@
 		$_SESSION['nom'] = $row2["name"];
 		$_SESSION['role'] = $row2["type"];
 		$_SESSION['description'] = $row2["employeeID"];
-	 	echo "done";
+	 	echo "Login successful !!";
 	}
 	else
 	{
-		echo "Username or Password is wrong...!!!!";
+		echo "Username or Password is wrong !!";
 	}
 	
 	$conn->close(); // Connection Closed.
