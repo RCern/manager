@@ -10,9 +10,9 @@
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
+
     
-    // Name of the logged in client
- 
+    include "connectdb.php";
 ?>
 
 
@@ -33,7 +33,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - My Account - <?php echo getFullName( $_SESSION["ID"] ); ?> </title>
 
 
     <head>
@@ -193,6 +193,30 @@
 
 
 <?php
+    function getFullName($ID)
+    {
+        // We initialize the return value
+        $result = "";
+
+        // We search in the database the data of the employee whose ID has been given by argument
+        $conn = connect();
+        $sql = "SELECT name from employee where accountID = '$ID'";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows == 1)
+        {
+            $row = $result->fetch_assoc();
+            $return =  $row["name"];
+        }
+        
+        // Connection Closed.
+        $conn->close();
+        
+        
+        return $return;
+    }
+
+
     function addEmployeeCard($ID)
     {
         // We initialize all values
@@ -202,7 +226,6 @@
 
         
         // We search in the database the data of the employee whose ID has been given by argument
-        include "connectdb.php";
         $conn = connect();
         $sql = "SELECT name, type, employeeID from employee where accountID = '$ID'";
         $result = $conn->query($sql);
@@ -235,8 +258,12 @@
                 </div>
             </div>
         ';
-        $conn->close(); // Connection Closed.
+
+        // Connection Closed.
+        $conn->close(); 
     }
+
+
 
     function addProjectCard($ID, $title, $leader, $date, $percentage, $priority)
     {
