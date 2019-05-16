@@ -44,7 +44,7 @@
 
   <body>
   <!-- adding the header -->
-    <?php include 'header.php'; ?>
+    <?php include 'headerFrontpage.php'; ?>
     
 
     <main>

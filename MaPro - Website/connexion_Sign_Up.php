@@ -38,16 +38,12 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/signup.js"></script>
     </head>
-
-    <body>
-    <!-- adding the header -->
-        <?php require 'header.php'; ?>
-    </body>
+    
 
     <body>
 
     <!-- adding the header -->
-        <?php require_once 'header.php'; ?>
+        <?php require_once 'headerFrontpage.php'; ?>
         <main>
 
             <br>
