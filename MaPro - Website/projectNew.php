@@ -51,6 +51,7 @@
         <?php include 'headerBackpage.php'; ?>
 
         <main>
+            <!-- adding the Sidenav -->
             <?php include 'headerBackpageSidenav.php'; ?>
 
             <h1 class="center blueDeep">Create a new Project !</h1>

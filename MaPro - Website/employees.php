@@ -1,18 +1,6 @@
 <?php
-    // On démarre la session AVANT d'écrire du code HTML
     session_start();
-
-    // length currently occupied by the last row of cards
-    $_SESSION['length'] = 0;
- 
-    // size taken by a card (its initial value is 3)
-    if(!isset($_SESSION['size'])) $_SESSION['size'] = 3;
-    
-    // Max length for a row of cards
-    $_SESSION['MAX'] = 12;
-    
-    // Name of the logged in client
- 
+    include "connectdb.php";
 ?>
 
 
@@ -33,7 +21,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - Employees </title>
 
 
     <head>
@@ -69,45 +57,18 @@
 
 
     <body>
-  <!-- adding the header -->
+        <!-- adding the header -->
         <?php include 'headerBackpage.php'; ?>
-
-
-
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      
-      <img class="circle" src="pictures/logo.png">
-      <span class="blueDeep name"> <?php echo $_SESSION['nom'] ?> </span>
-
-      <span class="blueLight email"><?php echo $_SESSION['role'] ?> </span>
-    </div></li>
-    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
-                <li>
-                    <form>
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
-                <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
-
-
         
-            
-            
-            <div id="example" class="container">
-            </div>
+        <main>
+            <!-- adding the Sidenav -->
+            <?php include 'headerBackpageSidenav.php'; ?>
+                
+            <div id="example" class="container"> </div>
             <script type="text/javascript" src="js/employees.js"></script>
 
+        </main>
     </body>
-
 </html>
 
 
