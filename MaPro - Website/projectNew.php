@@ -1,9 +1,11 @@
+<?php include "connectdb.php"; ?>
+
+
 <html lang="en">
   <link rel="icon" type="image/png" href="./pictures/logo.png"/>
 
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
-  <link rel="stylesheet" href="css/tooltip.css"/>
 
 
   <style>
@@ -49,6 +51,7 @@
         <?php include 'headerBackpage.php'; ?>
 
         <main>
+            <?php include 'headerBackpageSidenav.php'; ?>
 
             <h1 class="center blueDeep">Create a new Project !</h1>
 

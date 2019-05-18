@@ -73,6 +73,8 @@
 
 
         <main>
+            <!-- adding the Sidenav -->
+            <?php include 'headerBackpageSidenav.php'; ?>
 
             <br>
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
