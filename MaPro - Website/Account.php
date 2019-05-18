@@ -192,15 +192,6 @@
             echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
         }
         $conn->close();
-
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
-        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
     }
 
 
