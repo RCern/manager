@@ -3,7 +3,6 @@
 
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
-  <link rel="stylesheet" href="css/projetCard.css"/>
   <link rel="stylesheet" href="css/tooltip.css"/>
 
 
@@ -46,7 +45,7 @@
 
 
     <body>
-  <!-- adding the header -->
+        <!-- adding the header -->
         <?php include 'headerBackpage.php'; ?>
 
         <main>
@@ -114,17 +113,18 @@
                                     $sql = "SELECT Tname FROM team";
                                     $result = $conn->query($sql);
                                     $i = 0;
-                                    if ($result->num_rows > 0) {
-                                      while($row[] = $result->fetch_assoc()) {
-                                          echo '<option value="'. $row[$i]["Tname"] .'" data-icon="pictures/logo.png">'.$row[$i]["Tname"].'</option>';
-                                          $i++;
+                                    if ($result->num_rows > 0)
+                                    {
+                                        while($row[] = $result->fetch_assoc())
+                                        {
+                                            echo '<option value="'. $row[$i]["Tname"] .'" data-icon="pictures/logo.png">'.$row[$i]["Tname"].'</option>';
+                                            $i++;
+                                        }
                                     }
-                                }
         
                                     $conn->close();
                                     
                                 ?>
-                                
                             </select>
                             <label>Team</label>
                         </div>
@@ -190,7 +190,7 @@
                     <div class="row">
                         <div class="col s5"></div>
                         <div class="input-field col s2">
-                            <button class="btn waves-effect waves-light zoom center" style="height:10%" type="submit" name="action" id="create">
+                            <button class="blueDeepBackground btn waves-effect waves-light zoom center" style="height:10%;background-color:#213B6B" type="submit" name="action" id="create">
                             <i class="material-icons center">get_app</i> Sign-up !
                             </button>
                         </div>

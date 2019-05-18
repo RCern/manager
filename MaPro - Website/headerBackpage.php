@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="css/general.css"/>
-<link rel="stylesheet" href="css/fontComfortaa.css"/>
-
-
 <!-- HEADER -->
 <div class="navbar-fixed">
     <nav class="darkBackground">
@@ -15,7 +11,7 @@
                 <li><a class="whiteToBlueLight smallZoom" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
                 <li><a class="whiteToBlueLight smallZoom" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
                 <li><a class="whiteToBlueLight smallZoom" href="employees.php"><i class="material-icons left">face</i>Employees</a></li>
-				<li><a class="whiteToBlueLight smallZoom" href="teams.php"><i class="material-icons left">groups</i>teams</a></li>
+				<li><a class="whiteToBlueLight smallZoom" href="teams.php"><i class="material-icons left">groups</i>Teams</a></li>
                 <li>
                     <form>
                         <div class="input-field smallZoom">
@@ -29,10 +25,12 @@
     </nav>
 </div>
 
-<div class="">
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
-</div>
 
+
+
+<div>
+    <a class="sidenav-trigger blueLightToBlueDeep" href="#" data-target="slide-out"><i class="material-icons small">menu</i></a>
+</div>
 
 
 
@@ -49,7 +47,7 @@
     <li><a class="blueLightToBlueDeep smallZoom" href="projectNew.php"> <i class="material-icons left">add_to_photos  </i>New Project</a></li>
     <li><a class="blueLightToBlueDeep smallZoom" href="account.php">    <i class="material-icons left">delete_sweep   </i>Delete Project</a></li>
     <li><a class="blueLightToBlueDeep smallZoom" href="employees.php">  <i class="material-icons left">face           </i>Employees</a></li>
-    <li><a class="blueLightToBlueDeep smallZoom" href="teams.php">      <i class="material-icons left">groups         </i>teams</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="teams.php">      <i class="material-icons left">groups         </i>Teams</a></li>
     
     <li>
         <form>
@@ -61,7 +59,11 @@
         </form>
     </li>
 
-    <li><a class=" btn waves-light red lighten-1 smallZoom" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
+    <li>
+        <a class=" btn waves-light red lighten-1 smallZoom" href='disconnect.php'>
+            <i class="material-icons left">exit_to_app</i>Log out
+        </a>
+    </li>
 </ul>
 
 

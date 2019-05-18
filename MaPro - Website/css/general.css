@@ -52,7 +52,21 @@ a.aBig:active
 
 
 /* Custom background */
-.darkBackground { background: #333333; }
+.darkBackground
+{
+    background: #333333;
+    background-color:#333333;
+}
+.blueLightBackground
+{
+    background:#5098D9;
+    background-color:#5098D9;
+}
+.blueDeepBackground
+{
+    background:#213B6B;
+    background-color:#213B6B;
+}
 
 .darkToBlueDeepBackground { background: #333333; }
 .darkToBlueDeepBackground:hover { background:#213B6B; }
@@ -61,8 +75,10 @@ a.aBig:active
 
 
 /* Zooms when hovering */
-.zoom,.smallZoom { transition: transform .2s; }
+.zoom { transition: transform .2s; }
 .zoom:hover { transform: scale(1.2); }
+
+.smallZoom { transition: transform .2s; }
 .smallZoom:hover { transform: scale(1.05); }
 
 

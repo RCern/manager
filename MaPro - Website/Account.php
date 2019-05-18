@@ -5,8 +5,8 @@
     // length currently occupied by the last row of cards
     $_SESSION['length'] = 0;
  
-    // size taken by a card (its initial value is 3)
-    if(!isset($_SESSION['size'])) $_SESSION['size'] = 3;
+    // size taken by a card (its initial value is 4)
+    if(!isset($_SESSION['size'])) $_SESSION['size'] = 4;
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
@@ -21,7 +21,6 @@
 
     <link rel="stylesheet" href="css/general.css"/>
     <link rel="stylesheet" href="css/fontComfortaa.css"/>
-    <link rel="stylesheet" href="css/projetCard.css"/>
     <link rel="stylesheet" href="css/backpage.css"/>
     <script src="js/account.js"></script>
 
@@ -69,7 +68,7 @@
 
 
     <body>
-  <!-- adding the header -->
+        <!-- adding the header -->
         <?php include 'headerBackpage.php'; ?>
 
 
@@ -87,8 +86,8 @@
             <div class="container row center">
                 <div class="col s2"></div>
 
-                <div class="col s3">
-                    <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
+                <div class="col s3 zoom">
+                    <a class='dropdown-trigger btn-large BlueDeepBackground' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
 
                     <!-- Dropdown Display -->
                     <ul id='dropdownDisplay' class='dropdown-content'>
@@ -101,8 +100,8 @@
 
                 <div class="col s2"></div>
 
-                <div class="col s3">
-                    <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
+                <div class="col s3 zoom">
+                    <a class='dropdown-trigger btn-large BlueLightBackground' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
 
                     <!-- Dropdown Search -->
                     <ul id='dropdownSearch' class='dropdown-content'>
@@ -123,11 +122,11 @@
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
                 <div id="tabs">
-                
-                <?php addProjectCardAll(); ?>
-
+                    <?php addProjectCardAll(); ?>
                 </div>
             </div>
+
+
             <br><br>
         </main>
     </body>
@@ -147,7 +146,7 @@
 
         // We display all our values
         echo '
-            <div class="container">
+            <div class="container smallZoom">
                 <div class="card-panel grey lighten-3">
                     <div class="row valign-wrapper">
                         <div class="col s3">
@@ -192,24 +191,37 @@
             echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
         }
         $conn->close();
+    
+        addProjectCardFake(15);
     }
 
 
 
 
     function addProjectCard($ID, $title, $team, $date, $percentage, $priority)
-    {        
+    {
+        // We make the title smaller accordingly to the maximum size of the box
+        $MAX_CARD_SMALL = 15;
+        $MAX_CARD_BIG = 30;
+
+        if( $_SESSION['size'] == 3 && strlen($title) > $MAX_CARD_SMALL)
+            $title = substr($title, 0, $MAX_CARD_SMALL) . '...';
+
+        if( $_SESSION['size'] == 6 && strlen($title) > $MAX_CARD_BIG)
+            $title = substr($title, 0, $MAX_CARD_BIG) . '...';
+
+
+
         // We verify if we need to create a new Row
         if($_SESSION['length'] == 0)
-        {
             echo '<div class="row">';
-        }
+        
 
         
         // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
         
-        echo '<div class="col s'. $_SESSION['size'] .' m'. $_SESSION['size'] .' l'. $_SESSION['size'] .' ">
+        echo '<div class="col s'. $_SESSION['size'] .' m'. $_SESSION['size'] .' l'. $_SESSION['size'] .' smallZoom">
                 <a href="project.php?ID='. $ID .'">';
 
 
@@ -217,19 +229,19 @@
         switch($priority)
         {
             case 1:
-                echo '<div class="card smallZoom whiteToBlueDeep red lighten-1">';
+                echo '<div class="card whiteToBlueDeep red lighten-1">';
             break;
 
             case 2:
-                echo '<div class="card smallZoom whiteToBlueDeep blue lighten-1">';
+                echo '<div class="card whiteToBlueDeep blue lighten-1">';
             break;
 
             case 3:
-                echo '<div class="card smallZoom whiteToBlueDeep green lighten-1">';
+                echo '<div class="card whiteToBlueDeep green lighten-1">';
             break;
 
             default:
-                echo '<div class="card smallZoom whiteToBlueDeep pink darken-3">';
+                echo '<div class="card whiteToBlueDeep pink darken-3">';
             break;
         }
 
@@ -275,6 +287,15 @@
             echo '</div>';
         }
     }
+
+
+
+
+    function addProjectCardFake($i)
+    {
+        for($index=0; $index < $i ; $index++)
+            addProjectCard(rand(1,100), "John DOE", "TEAM T", "01 jan. 2019", rand(0,100), rand(1,3));
+    }
 ?>
 
 
@@ -292,6 +313,17 @@
 
 
 <style>
+        /* Project Card */
+    .card
+    {
+        text-align: center;
+    }
+
+    .card-title
+    {
+        font-weight: bold;
+    }
+
     .aCard:link
     {
         background-color: transparent;
@@ -302,7 +334,7 @@
         background-color: transparent;
         text-decoration: none;
     }
-    .aCard:hover,.aCard:hover
+    .aCard:hover
     {
         background-color: transparent;
     }
