@@ -63,22 +63,22 @@
     {
         if( !isset($_SESSION['ID']) )
         {
-            addLink("connexion_Login.php", "account_circle", "Login");
-            addLink("connexion_Sign_Up.php", "person_add", "Sign up");
+            addLink("connexion_Login.php",   "whiteToBlueLight", "account_circle", "Login");
+            addLink("connexion_Sign_Up.php", "whiteToBlueLight", "person_add",     "Sign up");
         }
         else
         {
-            addLink("account.php", "account_circle", "My Account");
-            addLink("disconnect.php", "exit_to_app", "Log out");
+            addLink("account.php",    "whiteToBlueLight", "account_circle", "My Account");
+            addLink("disconnect.php", "whiteToRed",       "exit_to_app",    "Log out");
         }
     }
 
 
-    function addLink($link, $icon, $text)
+    function addLink($link, $color, $icon, $text)
     {
         echo '
         <li>
-            <a class="aBig whiteToBlueLight smallZoom" href="' . $link . '">
+            <a class="aBig ' . $color . ' smallZoom" href="' . $link . '">
                 <i class="material-icons left">' . $icon . '</i>' . $text . '
             </a>
         </li>';

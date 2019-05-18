@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/homepage.css"/>
   <link rel="stylesheet" href="css/general.css"/>
   <link rel="stylesheet" href="css/fontComfortaa.css"/>
-  <link rel="stylesheet" href="css/frontpageH.css"/>
 
 
   <title>MaPro - Homepage</title>
@@ -101,7 +100,7 @@
       <div class="col s5">
         <h1 class="center blueDeep">In-depth Presentation</h1>
         <h2 class="center blueLight">MaPro, an ERP tool</h2>
-        <h5>MaPro is a project manager used for business or personal purposes. It is an easy-to-handle tool to help plan out your team's projects inside a company. It follows the progression of the project as well as its participants, leader, costs and revenues.</h5>
+        <h5 style="text-align: justify">MaPro is a project manager used for business or personal purposes. It is an easy-to-handle tool to help plan out your team's projects inside a company. It follows the progression of the project as well as its participants, leader, costs and revenues.</h5>
 
       </div>
 

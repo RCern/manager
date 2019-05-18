@@ -10,7 +10,7 @@
     
     // Max length for a row of cards
     $_SESSION['MAX'] = 12;
-    
+
     
     include "connectdb.php";
 ?>
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/fontComfortaa.css"/>
     <link rel="stylesheet" href="css/projetCard.css"/>
     <link rel="stylesheet" href="css/backpage.css"/>
+    <script src="js/account.js"></script>
 
 
     <style>
@@ -86,7 +87,7 @@
             <div class="container row center">
                 <div class="col s2"></div>
 
-                <div class="col s4">
+                <div class="col s3">
                     <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
 
                     <!-- Dropdown Display -->
@@ -98,9 +99,9 @@
                     </ul>
                 </div>
 
-                <script src="js/account.js"></script>
+                <div class="col s2"></div>
 
-                <div class="col s4">
+                <div class="col s3">
                     <a class='zoom dropdown-trigger btn-large' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
 
                     <!-- Dropdown Search -->
@@ -122,30 +123,8 @@
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
                 <div id="tabs">
-               <?php
-                    require_once('connectdb.php');
-                    $conn = connect();
-
-                    $sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
-                    $result = $conn->query($sql);
-
-
-                    if ($result->num_rows > 0)
-                    {
-                        $i = 0;
-                        while($row[] = $result->fetch_assoc())
-                        {                  
-                            addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
-                            $i++;
-                        }
-                    }
-                    else
-                    {
-                        echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
-                    }
-                    $conn->close();
-                ?>
-
+                
+                <?php addProjectCardAll(); ?>
 
                 </div>
             </div>
@@ -189,17 +168,47 @@
 
 
 
-    function addProjectCard($ID, $title, $leader, $date, $percentage, $priority)
-    {
-        // We verify if we need to end the Row
-        if($_SESSION['length'] >= $_SESSION['MAX'])
-        {
-            $_SESSION['length'] = 0;
-            echo '</div>';
-        }
 
-        
-        // We verify if we need to create a new Row (IN THIS ORDER !!!)
+    function addProjectCardAll()
+    {
+        require_once('connectdb.php');
+        $conn = connect();
+
+        $sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+        $result = $conn->query($sql);
+
+
+        if ($result->num_rows > 0)
+        {
+            $i = 0;
+            while($row[] = $result->fetch_assoc())
+            {                  
+                addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
+                $i++;
+            }
+        }
+        else
+        {
+            echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
+        }
+        $conn->close();
+
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+        addProjectCard(rand(1,100), "JEAN-MI", "les gentils", "2019-02-02", rand(1,100), rand(1,3));
+    }
+
+
+
+
+    function addProjectCard($ID, $title, $team, $date, $percentage, $priority)
+    {        
+        // We verify if we need to create a new Row
         if($_SESSION['length'] == 0)
         {
             echo '<div class="row">';
@@ -208,7 +217,8 @@
         
         // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
-        echo '<div class="col s'. $_SESSION['size'] .'">
+        
+        echo '<div class="col s'. $_SESSION['size'] .' m'. $_SESSION['size'] .' l'. $_SESSION['size'] .' ">
                 <a href="project.php?ID='. $ID .'">';
 
 
@@ -228,7 +238,7 @@
             break;
 
             default:
-                echo '<div class="card smallZoom whiteToBlueDeep pink darken-1">';
+                echo '<div class="card smallZoom whiteToBlueDeep pink darken-3">';
             break;
         }
 
@@ -239,35 +249,40 @@
         */
 
         echo '
-                            <div class="card-content">
+                        <div class="card-content">
 
-                                <div class="card-title" style="font-weight: bold;color: inherit;">' . $title . '</div>
-                                <br><br>
-                                <h5>Directed by :<br></h5>
-                                <div class="whiteToBlueDeep>' . $leader . '</div>
-
-                                <br><br>
-                                <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
-                                
-                            </div>
-
-
-
-                            <div class="card-action">
-                                <h5 style="color: inherit"> ' . $percentage . ' % <h5>
-
-                                <div class="container progress grey darken-4">
-                                    <div class="determinate white" style="width: ' . $percentage . '%"></div>
-                                </div>
-                            </div>
-                            
+                            <div class="card-title" style="font-weight: bold;color: inherit;">' . $title . '</div>
+                            <br><br>
+                            <h5>Directed by :</h5>
                             <br>
+                            <h6>' . $team . '</h6>
 
+                            <br><br>
+                            <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
+                            
                         </div>
+
+
+
+                        <div class="card-action">
+                            <h5 style="color: inherit"> ' . $percentage . ' % <h5>
+
+                            <div class="container progress grey darken-4">
+                                <div class="determinate white" style="width: ' . $percentage . '%"></div>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </a>
             </div>
         ';
+
+        // We verify if we need to end the Row
+        if($_SESSION['length'] >= $_SESSION['MAX'])
+        {
+            $_SESSION['length'] = 0;
+            echo '</div>';
+        }
     }
 ?>
 

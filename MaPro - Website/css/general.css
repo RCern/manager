@@ -8,6 +8,7 @@
     font-family: Comfortaa;
 }
 
+.AZEZA { text-align: justify; }
 
 
 /* Big a */
@@ -45,6 +46,9 @@ a.aBig:active
 
 .blueLightToBlueDeep { color:#5098D9; }
 .blueLightToBlueDeep:hover { color:#213B6B; }
+
+.whiteToRed { color:white; }
+.whiteToRed:hover { color:#B41B1B; }
 
 
 /* Custom background */

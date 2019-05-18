@@ -16,7 +16,7 @@ function smallCards()
     {
         type:'POST',
         url:'sizes.php',
-        data: { sizes: '3'},
+        data: { sizes: '4'},
         success:function(response) { document.location.reload(true); }  
     });
 }

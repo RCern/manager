@@ -20,3 +20,40 @@ margin:5%;
     margin:5%;
     text-align:justify;
 }
+
+
+/* All Headers */
+
+.h1
+{
+    text-align: center;
+    color:#213B6B;
+    font-weight: bold;
+}
+
+.h2
+{
+    text-align: center;
+    color:#5098D9;
+}
+
+.h3
+{
+    color:#FFFFFF;
+}
+
+.h4
+{
+    color:#5098D9;
+}
+
+.h5
+{
+    color:#232323;
+}
+
+.h6
+{
+    color:#767676;
+    line-height: 1.6;
+}

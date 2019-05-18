@@ -26,10 +26,11 @@
                     </form>
                 </li>
             </ul>
-
-
-      
     </nav>
+</div>
+
+<div class="">
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
 </div>
 
 
@@ -39,27 +40,29 @@
     <li>
         <div class="user-view">      
             <img class="circle" src="pictures/logo.png">
-            <span class="blueDeep name"> <?php echo getEmployeeValue($_SESSION["ID"], "name"); ?> </span>
-            <span class="blueLight email"><?php echo getEmployeeValue($_SESSION["ID"], "type"); ?> </span>
+            <span class="blueDeep name">   <?php echo getEmployeeValue($_SESSION["ID"], "name"); ?> </span>
+            <span class="blueLight email"> <?php echo getEmployeeValue($_SESSION["ID"], "type"); ?> </span>
         </div>
     </li>
-    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-    <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
-    <li><a class="blueLightToBlueDeep" href="employees.php"><i class="material-icons left">face</i>Employees</a></li>
-    <li><a class="blueLightToBlueDeep" href="teams.php"><i class="material-icons left">groups</i>teams</a></li>
+
+    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">    <i class="material-icons left">account_circle </i>My Profile</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="projectNew.php"> <i class="material-icons left">add_to_photos  </i>New Project</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">    <i class="material-icons left">delete_sweep   </i>Delete Project</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="employees.php">  <i class="material-icons left">face           </i>Employees</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="teams.php">      <i class="material-icons left">groups         </i>teams</a></li>
+    
     <li>
         <form>
-            <div class="input-field">
+            <div class="input-field smallZoom">
                 <input id="search" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
             </div>
         </form>
     </li>
-    <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
+
+    <li><a class=" btn waves-light red lighten-1 smallZoom" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
+</ul>
 
 
 
