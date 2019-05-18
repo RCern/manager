@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2019 at 05:16 PM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: May 16, 2019 at 04:45 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,7 +40,7 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`accountID`, `username`, `email`, `password`) VALUES
-(1, 'Albert', '', 'abc'),
+(1, 'Rcern', '', 'abc'),
 (2, 'Gregory', '', '123\r\n');
 
 -- --------------------------------------------------------
@@ -61,6 +61,64 @@ CREATE TABLE `accountemployee` (
 INSERT INTO `accountemployee` (`accountID`, `employeeID`) VALUES
 (1, 1),
 (2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assets`
+--
+
+CREATE TABLE `assets` (
+  `ID_assets` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `Revenue` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `assets`
+--
+
+INSERT INTO `assets` (`ID_assets`, `name`, `Revenue`) VALUES
+(1, 'Abc', 1000),
+(2, 'aaa', 500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `costassets`
+--
+
+CREATE TABLE `costassets` (
+  `IdP` int(11) NOT NULL,
+  `IdA` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `costassets`
+--
+
+INSERT INTO `costassets` (`IdP`, `IdA`) VALUES
+(1, 1),
+(1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `costliabilities`
+--
+
+CREATE TABLE `costliabilities` (
+  `IdP` int(11) NOT NULL,
+  `IdL` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `costliabilities`
+--
+
+INSERT INTO `costliabilities` (`IdP`, `IdL`) VALUES
+(1, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -107,8 +165,27 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`employeeID`, `name`, `type`, `salary`, `timeParticipation`, `accountID`) VALUES
-(1, 'Albert  Hiskronow', 'CEO', 30000, 150, 1),
-(2, 'Gregory', 'RH', 20000, 120, 2);
+(1, 'Radu Cernaianu', 'BOSS', 30000, 150, 1),
+(2, 'Louis Potron', 'Communication', 25000, 0, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `liabilities`
+--
+
+CREATE TABLE `liabilities` (
+  `ID_liabilities` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `price` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `liabilities`
+--
+
+INSERT INTO `liabilities` (`ID_liabilities`, `name`, `price`) VALUES
+(1, 'WaWA', 500);
 
 -- --------------------------------------------------------
 
@@ -130,18 +207,18 @@ CREATE TABLE `licenses` (
 --
 
 CREATE TABLE `profitability` (
-  `assets` double NOT NULL,
-  `liabilities` double NOT NULL,
-  `mounth` date NOT NULL,
-  `id` int(5) NOT NULL
+  `ID_assets` int(11) NOT NULL,
+  `ID_liabilities` int(11) NOT NULL,
+  `month` int(11) NOT NULL,
+  `ProjectId` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `profitability`
 --
 
-INSERT INTO `profitability` (`assets`, `liabilities`, `mounth`, `id`) VALUES
-(500000, 450000, '2018-11-01', 1);
+INSERT INTO `profitability` (`ID_assets`, `ID_liabilities`, `month`, `ProjectId`) VALUES
+(1, 1, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -166,8 +243,9 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`projectID`, `name`, `hours_allocated`, `deadline`, `revenus`, `costs`, `priority`, `percentageDone`, `Description`) VALUES
-(1, 'First Project', 40, '2019-04-28', 1000000, 500000, 5, 42, ''),
-(2, 'Transverse', 100, '2019-05-18', 0, 0, 2, 75, 'oikgbkidgvbkneqskfn');
+(3, '', 0, '0000-00-00', 0, 0, 0, 0, ' '),
+(1, 'Transverse', 100, '2019-05-31', 0, 0, 2, 10, 'oikgbkidgvbkneqskfn'),
+(2, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2019-05-15', 0, 0, 0, 0, '0\r\n');
 
 -- --------------------------------------------------------
 
@@ -187,8 +265,7 @@ CREATE TABLE `project_team` (
 
 INSERT INTO `project_team` (`projectID`, `teamID`, `hours`) VALUES
 (1, 1, 39),
-(2, 2, 100),
-(3, 1, 1);
+(2, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -206,8 +283,8 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`teamID`, `Tname`) VALUES
-(1, 'team1'),
-(2, 'Team2');
+(1, 'Team 1'),
+(2, 'Team 2');
 
 -- --------------------------------------------------------
 
@@ -258,6 +335,12 @@ ALTER TABLE `account`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `assets`
+--
+ALTER TABLE `assets`
+  ADD PRIMARY KEY (`ID_assets`);
+
+--
 -- Indexes for table `costs`
 --
 ALTER TABLE `costs`
@@ -278,6 +361,12 @@ ALTER TABLE `employee`
   ADD KEY `fk_account_id` (`accountID`);
 
 --
+-- Indexes for table `liabilities`
+--
+ALTER TABLE `liabilities`
+  ADD PRIMARY KEY (`ID_liabilities`);
+
+--
 -- Indexes for table `licenses`
 --
 ALTER TABLE `licenses`
@@ -287,7 +376,7 @@ ALTER TABLE `licenses`
 -- Indexes for table `profitability`
 --
 ALTER TABLE `profitability`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`ProjectId`);
 
 --
 -- Indexes for table `project`
