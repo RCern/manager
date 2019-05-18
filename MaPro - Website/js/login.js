@@ -14,7 +14,7 @@ $(document).ready(function()
 		}
 		else
 		{
-			$.post("login.php",{ username1:username, password1:password },
+			$.post("BDD_login.php",{ username1:username, password1:password },
 			function(data)
 			{
 				if(data == 'Username or Password is wrong !!')

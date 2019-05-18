@@ -10,19 +10,19 @@ $(document).ready(function()
 
         if (username == '' || email == '' || password == '' || passwordVerif == '' || token == '')
         {
-            alert("Please fill all fields...!!!!!!");
+            alert("Please fill all fields !!");
         }
         else if ((password.length) < 8)
         {
-            alert("Password should atleast 8 character in length...!!!!!!");
+            alert("Password should atleast 8 character in length !!");
         }
         else if (!(password).match(passwordVerif))
         {
-            alert("Your passwords don't match. Try again?");
+            alert("Your passwords don't match. Try again ?");
         }
         else
         {
-            $.post("signup.php",
+            $.post("BDD_signup.php",
             {
                 username1: username,
                 email1: email,
@@ -31,8 +31,9 @@ $(document).ready(function()
             },
             function(data)
             {
-                if (data == 'You have Successfully Registered.....')
+                if (data == 'You have Successfully Registered !!')
                 {
+					// window.location.href = 'account.php';
                     $("form")[0].reset();
                 }
                 alert(data);

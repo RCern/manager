@@ -86,22 +86,25 @@
             <div class="container row center">
                 <div class="col s2"></div>
 
+
                 <div class="col s3 zoom">
-                    <a class='dropdown-trigger btn-large BlueDeepBackground' href='#' data-target='dropdownDisplay'><i class="material-icons left">view_list</i>Display</a>
+                    <a class='dropdown-trigger btn-large blueDeepBackground' href='#' data-target='dropdownDisplay' style="background:#213B6B"><i class="material-icons left">view_list</i>Display</a>
 
                     <!-- Dropdown Display -->
                     <ul id='dropdownDisplay' class='dropdown-content'>
-                        <li><a href="#!" id="bigCard" onclick="bigCards();"><i class="material-icons">sim_card_alert</i> Big Cards</a></li>
-                        <li><a href="#!" id="smallCard" onclick="smallCards();"><i class="material-icons">sim_card_alert</i> Small Cards</a></li>
+                        <li><a href="#!" id="bigCard" onclick="bigCards()"><i class="material-icons">sim_card_alert</i> Big Cards</a></li>
+                        <li><a href="#!" id="smallCard" onclick="smallCards()"><i class="material-icons">sim_card_alert</i> Small Cards</a></li>
                         <li class="divider" tabindex="-1"></li>
                         <li><a href="#!" id="listShow" onclick="listShow()"><i class="material-icons">view_list</i> List</a></li>
                     </ul>
                 </div>
 
+
                 <div class="col s2"></div>
 
+
                 <div class="col s3 zoom">
-                    <a class='dropdown-trigger btn-large BlueLightBackground' href='#' data-target='dropdownSearch'><i class="material-icons left">search</i>Search by</a>
+                    <a class='dropdown-trigger btn-large blueLightBackground' href='#' data-target='dropdownSearch' style="background:#213B6B"><i class="material-icons left">search</i>Search by</a>
 
                     <!-- Dropdown Search -->
                     <ul id='dropdownSearch' class='dropdown-content'>
@@ -111,6 +114,7 @@
                         <li><a href="#!"><i class="material-icons">supervisor_account</i>Leader</a></li>
                     </ul>
                 </div>
+                
 
                 <div class="col s2"></div>
             </div>

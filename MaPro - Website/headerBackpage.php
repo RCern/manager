@@ -59,8 +59,8 @@
         </form>
     </li>
 
-    <li>
-        <a class=" btn waves-light red lighten-1 smallZoom" href='disconnect.php'>
+    <li class="smallZoom">
+        <a class=" btn waves-light red lighten-1" href='disconnect.php'>
             <i class="material-icons left">exit_to_app</i>Log out
         </a>
     </li>
