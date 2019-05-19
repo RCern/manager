@@ -34,7 +34,7 @@
 
 
 
-    function addProjectCardEmployee($ID)
+    function addProjectCardsEmployee($ID)
     {
         require_once('connectdb.php');
         $conn = connect();
@@ -171,12 +171,15 @@
 
 
 
-    function addProjectCardFake($i)
+    function addProjectCardsFake($i)
     {
         for($index=0; $index < $i ; $index++)
             addProjectCard(rand(1,100), "John DOE", "TEAM T", "01 jan. 2019", rand(0,100), rand(1,3));
     }
 ?>
+
+
+
 
 <style>
         /* Project Card */

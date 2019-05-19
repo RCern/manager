@@ -137,8 +137,8 @@
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
                 <div id="tabs">
-                    <?php addProjectCardEmployee($_SESSION["ID"]); ?>
-                    <?php addProjectCardFake(15); ?>
+                    <?php addProjectCardsEmployee($_SESSION["ID"]); ?>
+                    <?php addProjectCardsFake(15); ?>
                 </div>
             </div>
 
