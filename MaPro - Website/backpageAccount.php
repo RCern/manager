@@ -13,7 +13,7 @@
 
     
     include "connectdb.php";
-    include "card.php";
+    include "backpageCard.php";
 ?>
 
 

@@ -99,8 +99,8 @@ function listShow()
         ajaxConfig:"POST", //ajax HTTP request type
         ajaxContentType:"json", // send parameters to the server as a JSON encoded string
         paginationSize:20,
-            columns:
-            [
+        columns:
+        [
             {title:"Project ID",    field:"projectID",      align:"center", sorter:"number",                     width:200},
             {title:"Project Name",  field:"name",           align:"center", sorter:"string", editor:"input",     width:200},
             {title:"Priority",      field:"priority",       align:"center", sorter:"number", editor:"select",    editorParams:{values:["1", "2", "3"]}},
