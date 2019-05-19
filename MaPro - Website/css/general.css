@@ -132,7 +132,7 @@ a.aBig:active
     line-height:1.2;
 }
 
-.tooltip .tooltiptext
+.tooltiptext
 {
     visibility: hidden;
     width: auto;

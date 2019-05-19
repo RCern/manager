@@ -30,13 +30,9 @@
         {
             margin:0px;
         }
-        .dropdown-content
-        {
-            z-index:3;
-        }
     </style>
 
-    <title> <?php echo "MaPro - My Account - " . getEmployeeValue($_SESSION["ID"], "name"); ?> </title>
+    <title> <?php echo "MaPro - Team " . rand(0,100); ?> </title>
 
 
     <head>
@@ -82,7 +78,7 @@
 
             <br>
             <!-- DISPLAY THE EMPLOYEE'S DATA -->
-            <?php  addEmployeeCard( $_SESSION['ID'] ); ?>
+            <?php  addTeamCard( rand(0,100) ); ?>
 
 
             <br><br>
@@ -98,7 +94,7 @@
             <!-- DISPLAY ALL PROJECTS -->
             <div class="container">
                 <div id="tabs">
-                    <?php addProjectCardsEmployee($_SESSION["ID"]); ?>
+                    <?php addProjectCardsTeam(1); ?>
                     <?php addProjectCardsFake(15); ?>
                 </div>
             </div>
@@ -109,4 +105,5 @@
 
         </main>
     </body>
+
 </html>

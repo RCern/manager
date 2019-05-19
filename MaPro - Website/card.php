@@ -2,6 +2,10 @@
     // MAKE SURE TO CALL THIS FILE IN A PAGE CONTAINING THE "connectdb.php"
 
 
+
+    /** Displays all informations concerning a given employee
+     * @param $ID Identifier of the employee
+     */
     function addEmployeeCard($ID)
     {
         // We initialize all values
@@ -33,7 +37,44 @@
 
 
 
+    
+    /** Displays all informations concerning a given team
+     * @param $ID Identifier of the team
+     */
+    function addTeamCard($teamID)
+    {
+        // We initialize all values
+        $nom = getTeamValue($teamID, "Tname");
+        $description = "Hello there !";
 
+
+        // We display all our values
+        echo '
+            <div class="container smallZoom">
+                <div class="card-panel grey lighten-3">
+                    <div class="row valign-wrapper">
+                        <div class="col s3">
+                            <img src="pictures/logo.png" alt="" class="circle responsive-img">
+                        </div>
+
+                        <div class="col s9 center" style="font-family: Comfortaa">
+                            <h1 class="blueDeep"> ' . $nom . ' </h1>
+                            <h3 class="blueLight"> Cowabunga </h3>
+                            <br>
+                            <h5 class="black-text"> ' . $description . ' </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ';
+    }
+
+    
+
+
+    /** Displays all informations on the project(s) a given employee is working on
+     * @param $ID Identifier of the employee
+     */
     function addProjectCardsEmployee($ID)
     {
         require_once('connectdb.php');
@@ -78,6 +119,55 @@
 
 
 
+    /** Displays all informations on the project(s) a given team is working on
+     * @param $ID Identifier of the team
+     */
+    function addProjectCardsTeam($teamID)
+    {
+        require_once('connectdb.php');
+        $conn = connect();
+        
+        $sql =
+        "SELECT * FROM team, project_team, project " .
+        "WHERE team.teamID = ". $teamID . " " .
+        "AND project_team.teamID = ". $teamID . " " .
+        "AND project_team.projectID = project.projectID";
+        $result = $conn->query($sql);
+
+
+        if ($result->num_rows > 0)
+        {
+            $i = 0;
+            while($row[] = $result->fetch_assoc())
+            {                  
+                $projectID = $row[$i]["projectID"];
+                $name = $row[$i]["name"];
+                $nameTeam = $row[$i]["Tname"];
+                $deadline = $row[$i]["deadline"];
+                $percentage = $row[$i]["percentageDone"];
+                $priority = $row[$i]["priority"];
+                $i++;
+
+                addProjectCard($projectID, $name, $nameTeam, $deadline, $percentage, $priority);
+            }
+        }
+        else
+        {
+            echo "<h1 class='center blueDeep'>No Project for the moment !</h1>";
+        }
+        $conn->close();
+    }
+
+
+
+    /** Displays all informations of a given project
+     * @param $ID Identifier of the project
+     * @param $title name of the project
+     * @param $team team working on the project
+     * @param $date end-date of the project
+     * @param $percentage % of completion of the project
+     * @param $priority rank of priority of the project (on a decreasing scale of 1 to 3)
+     */
     function addProjectCard($ID, $title, $team, $date, $percentage, $priority)
     {
         // We make the title smaller accordingly to the maximum size of the box
@@ -170,7 +260,9 @@
 
 
 
-
+    /** Creates a number of fake project cards
+     * @param $i number of fake project cards to create
+     */
     function addProjectCardsFake($i)
     {
         for($index=0; $index < $i ; $index++)

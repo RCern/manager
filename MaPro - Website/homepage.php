@@ -53,7 +53,7 @@
       <div id="index-banner" class="parallax-container">
         <div class="overlay">
           <div class="parallax"><img src="pictures/jean.jpg" alt="Presentation picture of people working together"></div>
-
+          <br><br>
             <h1 class="blueLight bold">Professional Management Website</h1>
             <h3>An Enterprise Resource Planning for the general public</h3>
 
@@ -117,7 +117,7 @@
 
       <div class="container center">
         <h1 class="blueDeep">Our most asked questions :</h1><br>
-        <ul class="collapsible">
+        <ul class="collapsible smallZoom">
           <?php
             addCollapsible("Can I use MaPro personally ?", "MaPro can indeed be used personally. You can easily create and manage your own projects for personal purposes.");
             addCollapsible("How can MaPro help my team ?", "MaPro is made to ensure the best experience for its users. It has an understandable interface with multiple features for your team's projects.");
