@@ -50,11 +50,11 @@
 
       
     <!-- Main Image + Informative text -->
-      <div id="index-banner" class="parallax-container" style="height: 90%">
+      <div id="index-banner" class="parallax-container">
         <div class="overlay">
-          <div class="parallax"><img src="pictures/jean.jpg" alt="Unsplashed background img 1"></div>
+          <div class="parallax"><img src="pictures/jean.jpg" alt="Presentation picture of people working together"></div>
 
-            <h1 class="blueLight" style="font-weight:bold;">Professional Management Website</h1>
+            <h1 class="blueLight bold">Professional Management Website</h1>
             <h3>An Enterprise Resource Planning for the general public</h3>
 
           </div>
@@ -155,7 +155,7 @@
       </div>
 
     </main>
-  <!-- adding the header -->
+    <!-- adding the header -->
     <?php include 'footer.php'; ?>
 
   </body>
@@ -177,13 +177,6 @@
 
 
 <?php
-  function blablabla($index)
-  {
-    for($i = 0; $i < $index; $i++)
-      echo "<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</h6>";
-  }
-
-
   function addIconRow($icon, $title, $description)
   {
     echo '
@@ -235,6 +228,10 @@
     ';
   }
 ?>
+
+
+
+
 <script>
   function redirect(link)
   {

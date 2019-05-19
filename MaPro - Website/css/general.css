@@ -10,6 +10,9 @@
 
 .AZEZA { text-align: justify; }
 
+.bold { font-weight:bold; }
+
+
 
 /* Big a */
 a.aBig:link
@@ -51,6 +54,8 @@ a.aBig:active
 .whiteToRed:hover { color:#B41B1B; }
 
 
+
+
 /* Custom background */
 .darkBackground
 {
@@ -74,12 +79,16 @@ a.aBig:active
 .darkToBlueLightBackground:hover { background:#5098D9; }
 
 
+
+
 /* Zooms when hovering */
 .zoom { transition: transform .2s; }
 .zoom:hover { transform: scale(1.2); }
 
 .smallZoom { transition: transform .2s; }
 .smallZoom:hover { transform: scale(1.05); }
+
+
 
 
 /* Zooms when hovering */
