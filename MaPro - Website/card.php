@@ -1,7 +1,7 @@
 <?php
     // MAKE SURE TO CALL THIS FILE IN A PAGE CONTAINING THE "connectdb.php"
 
-    
+
     function addEmployeeCard($ID)
     {
         // We initialize all values
@@ -39,7 +39,15 @@
         require_once('connectdb.php');
         $conn = connect();
 
-        $sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+        //$sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
+        
+
+        $sql =
+        "SELECT * FROM team_employee, team, project_team, project " .
+        "WHERE team_employee.employeeID = ". $ID . " " .
+        "AND team_employee.teamID = team.teamID ". " " .
+        "AND team.teamID = project_team.teamID ". " " .
+        "AND project_team.projectID = project.projectID";
         $result = $conn->query($sql);
 
 
@@ -48,8 +56,16 @@
             $i = 0;
             while($row[] = $result->fetch_assoc())
             {                  
-                addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
+                //addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
+                $projectID = $row[$i]["projectID"];
+                $name = $row[$i]["name"];
+                $nameTeam = $row[$i]["Tname"];
+                $deadline = $row[$i]["deadline"];
+                $percentage = $row[$i]["percentageDone"];
+                $priority = $row[$i]["priority"];
                 $i++;
+
+                addProjectCard($projectID, $name, $nameTeam, $deadline, $percentage, $priority);
             }
         }
         else
