@@ -65,10 +65,14 @@
             <?php include 'headerBackpageSidenav.php'; ?>
 
             
+            <h1 class="center blueDeep">List of all Teams</h1>
+
+            <br>
+
+            
             <div class="container">
                 <div class="row">
                     <div class="col s6 push-s3">
-                        <h3>Teams:</h3>
                         <div id="teams"></div>
                     </div>
                 </div>

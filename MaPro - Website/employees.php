@@ -63,6 +63,10 @@
         <main>
             <!-- adding the Sidenav -->
             <?php include 'headerBackpageSidenav.php'; ?>
+
+            <h1 class="center blueDeep">List of all Employees</h1>
+
+            <br>
                 
             <div id="example" class="container"> </div>
             <script type="text/javascript" src="js/employees.js"></script>
