@@ -53,3 +53,11 @@
         $('.dropdown-trigger').dropdown();
     });
 </script>
+
+<style>
+    .dropdown-content
+    {
+        color:#213B6B;
+        z-index: 1;
+    }
+</style>

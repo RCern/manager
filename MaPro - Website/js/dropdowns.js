@@ -10,6 +10,8 @@ function bigCards()
 }
 
 
+
+
 function smallCards()
 {
 	$.ajax(
@@ -20,6 +22,8 @@ function smallCards()
         success:function(response) { document.location.reload(true); }  
     });
 }
+
+
 
 
 function listShow()
@@ -97,49 +101,54 @@ function listShow()
         paginationSize:20,
             columns:
             [
-            {title:"Project ID", field:"projectID", sorter:"number", width:200},
-            {title:"Project Name", field:"name", sorter:"string", width:200,editor:"input"},
-            {title:"Priority", field:"priority", sorter:"number",editor:"select", editorParams:{values:["1", "2", "3"]}},
-            {title:"Team assigned", field:"Tname", sorter:"string", width: 200 , editor:"select",editorParams:{values: TeamNames}},
-            {title:"Deadline", field:"deadline", sorter:"date", sorterParams:{format:"YYYY-MM-DD",alignEmptyValues:"top",},align:"center",editor: dateEditor},
-            {title:"Progress", field:"percentageDone", formatter:"progress", sorter:"number",editor:"number", editorParams:{
-        min:0,
-        max:100,
-
-    }},
-    {title:"Delete", field:"delete", align:"center",formatter:"buttonCross", cellClick:function(e, cell){
-        var data = JSON.stringify(cell.getRow().getData());
-        console.log(data);
-        if(confirm("Are you sure you want to delete this project?")){
-         $.ajax(
-        {
-            type:'POST',
-            url:'deleteProject.php',
-            data: { obj:data},
-            success:function(response)
+            {title:"Project ID",    field:"projectID",      align:"center", sorter:"number",                     width:200},
+            {title:"Project Name",  field:"name",           align:"center", sorter:"string", editor:"input",     width:200},
+            {title:"Priority",      field:"priority",       align:"center", sorter:"number", editor:"select",    editorParams:{values:["1", "2", "3"]}},
+            {title:"Team assigned", field:"Tname",          align:"center", sorter:"string", editor:"select",    width: 200 , editorParams:{values: TeamNames}},
+            {title:"Deadline",      field:"deadline",       align:"center", sorter:"date",   editor: dateEditor, sorterParams:{format:"YYYY-MM-DD",alignEmptyValues:"top",} },
+            {title:"Progress",      field:"percentageDone", align:"left",   sorter:"number", editor:"number",    formatter:"progress", editorParams:
+                {
+                    min:0,
+                    max:100,
+                }
+            },
             {
-                table.redraw(true);
-            }
-        }); 
-    }}},
-    ], 
-    cellEdited:function(cell)
-    {
-        var data = JSON.stringify(cell.getData());
-
-
-        $.ajax(
+                title:"Delete", field:"delete", align:"center",formatter:"buttonCross", cellClick:function(e, cell)
+                {
+                    var data = JSON.stringify(cell.getRow().getData());
+                    console.log(data);
+                    if(confirm("Are you sure you want to delete this project?"))
+                    {
+                        $.ajax(
+                        {
+                            type:'POST',
+                            url:'deleteProject.php',
+                            data: { obj:data},
+                            success:function(response)
+                            {
+                                table.redraw(true);
+                            }
+                        }); 
+                    }
+                }
+            },
+        ], 
+        cellEdited:function(cell)
         {
-            type:'POST',
-            url:'updateTabs.php',
-            
-            data: { obj:data},
-            success:function(response)
-            {
-            
-            }
-        }); 
-    }
-});
+            var data = JSON.stringify(cell.getData());
 
+
+            $.ajax(
+            {
+                type:'POST',
+                url:'updateTabs.php',
+                
+                data: { obj:data},
+                success:function(response)
+                {
+                
+                }
+            }); 
+        }
+    });
 }

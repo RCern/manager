@@ -79,8 +79,6 @@
     {
         require_once('connectdb.php');
         $conn = connect();
-
-        //$sql = "SELECT P.projectID, P.name ,T.Tname, P.deadline, P.percentageDone,P.priority from project as P JOIN project_team as PT ON P.projectID = PT.projectID JOIN team as T ON T.teamID = PT.teamID";
         
 
         $sql =
@@ -97,7 +95,6 @@
             $i = 0;
             while($row[] = $result->fetch_assoc())
             {                  
-                //addProjectCard($row[$i]["projectID"], $row[$i]["name"], $row[$i]["Tname"], $row[$i]["deadline"], $row[$i]["percentageDone"], $row[$i]["priority"]);
                 $projectID = $row[$i]["projectID"];
                 $name = $row[$i]["name"];
                 $nameTeam = $row[$i]["Tname"];
@@ -278,6 +275,7 @@
     .card
     {
         text-align: center;
+        z-index: -1;
     }
 
     .card-title
