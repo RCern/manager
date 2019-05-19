@@ -68,8 +68,8 @@
         }
         else
         {
-            addLink("account.php",    "whiteToBlueLight", "account_circle", "My Account");
-            addLink("disconnect.php", "whiteToRed",       "exit_to_app",    "Log out");
+            addLink("backpageAccount.php", "whiteToBlueLight", "account_circle", "My Account");
+            addLink("disconnect.php",      "whiteToRed",       "exit_to_app",    "Log out");
         }
     }
 

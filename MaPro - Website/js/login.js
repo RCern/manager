@@ -21,7 +21,7 @@ $(document).ready(function()
 					$('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
 				
 				else if(data == 'Login successful !!')
-					window.location.href = 'account.php';
+					window.location.href = 'backpageAccount.php';
 			});
 		}
 	});
