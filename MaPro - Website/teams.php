@@ -33,7 +33,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - <?php echo $_SESSION["nom"]; ?> </title>
 
 
     <head>
@@ -73,32 +73,6 @@
         <?php include 'headerBackpage.php'; ?>
 
 
-
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      
-      <img class="circle" src="pictures/logo.png">
-      <span class="blueDeep name"> <?php echo $_SESSION['nom'] ?> </span>
-
-      <span class="blueLight email"><?php echo $_SESSION['role'] ?> </span>
-    </div></li>
-    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
-                <li>
-                    <form>
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
-                <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
-
-
         
             
             <div class="container">
@@ -110,6 +84,17 @@
                 </div>
             </div>
             </div>
+
+            <div class="container">
+                <div class="row">
+                <div class="col s6 push-s3">
+                    <h3>Teams details:</h3>
+                    <div id="teamsEmployees">
+                    </div>
+                </div>
+            </div>
+            </div>
+           
             <script type="text/javascript" src="js/teams.js"></script>
 
     </body>
@@ -124,10 +109,5 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function()
-    {
-        $('.dropdown-trigger').dropdown();
-    });
-</script>
+
 

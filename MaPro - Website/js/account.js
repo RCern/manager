@@ -21,6 +21,17 @@ function smallCards()
     });
 }
 
+function goTO(id){
+    $.ajax(
+    {
+        type:'POST',
+        url:'definePRJ.php',
+        data: { id1: id},
+        success:function(response) { 
+            window.location.href = "project.php"; }  
+    });
+}
+
 
 function listShow()
 {

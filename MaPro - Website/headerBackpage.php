@@ -35,7 +35,7 @@
     </nav>
 </div>
 
-<ul id="mobile-links" class="sidenav">
+<ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       
       <img class="circle" src="pictures/logo.png">
@@ -46,6 +46,8 @@
     <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
                 <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
                 <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
+                <li><a class="blueLightToBlueDeep" href="employees.php"><i class="material-icons left">face</i>Employees</a></li>
+                <li><a class="blueLightToBlueDeep" href="teams.php"><i class="material-icons left">groups</i>Teams</a></li>
                 <li>
                     <form>
                         <div class="input-field">
@@ -55,8 +57,9 @@
                         </div>
                     </form>
                 </li>
-  </ul>
-
+                <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

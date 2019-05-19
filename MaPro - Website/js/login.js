@@ -20,7 +20,7 @@ $(document).ready(function()
 				if(data == 'Username or Password is wrong !!')
 					$('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
 				
-				else if(data == 'Login successful !!')
+				else if(data == 'done')
 					window.location.href = 'account.php';
 			});
 		}

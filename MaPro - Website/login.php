@@ -33,7 +33,7 @@
 	}
 	else
 	{
-		echo "Username or Password is wrong...!!!!";
+		echo "Username or Password is wrong...!!";
 	}
 	
 	$conn->close(); // Connection Closed.

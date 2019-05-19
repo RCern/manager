@@ -33,7 +33,7 @@
     </style>
 
 
-    <title>MaPro - My Account <?php echo $_SESSION["nom"]; ?> </title>
+    <title>MaPro - <?php echo $_SESSION["nom"]; ?> </title>
 
 
     <head>
@@ -74,31 +74,7 @@
 
 
 
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      
-      <img class="circle" src="pictures/logo.png">
-      <span class="blueDeep name"> <?php echo $_SESSION['nom'] ?> </span>
-
-      <span class="blueLight email"><?php echo $_SESSION['role'] ?> </span>
-    </div></li>
-    <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">account_circle</i>My Profile</a></li>
-                <li><a class="blueLightToBlueDeep" href="projectNew.php"><i class="material-icons left">add_to_photos</i>New Project</a></li>
-                <li><a class="blueLightToBlueDeep" href="account.php"><i class="material-icons left">delete_sweep</i>Delete Project</a></li>
-                <li><a class="blueLightToBlueDeep" href="employees.php"><i class="material-icons left">face</i>Employees</a></li>
-				<li><a class="blueLightToBlueDeep" href="teams.php"><i class="material-icons left">groups</i>teams</a></li>
-                <li>
-                    <form>
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
-                <li><a class=" btn waves-light red lighten-1" href='disconnect.php'><i class="material-icons left">exit_to_app</i>Log out</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons small">menu</i></a>
+  
 
 
         <main>
@@ -235,7 +211,7 @@
         // Now we add the column space where we'll create the card
         $_SESSION['length'] += $_SESSION['size'];
         echo '<div class="col s'. $_SESSION['size'] .'">
-                <a href="project.php?ID='. $ID .'">';
+                <a onclick="goTO('.$ID.')">';
 
 
         // According to the priority, we create a card of a given color
@@ -269,8 +245,9 @@
 
                                 <div class="card-title" style="font-weight: bold;color: inherit;">' . $title . '</div>
                                 <br><br>
-                                <h5>Directed by :<br></h5>
-                                <div class="whiteToBlueDeep>' . $leader . '</div>
+                                <h5>Team:<br></h5>
+
+                                <div class="whiteToBlueDeep">' . $leader . '</div>
 
                                 <br><br>
                                 <h5 style="color: inherit">Due for :<br>' . $date . '</h5>
@@ -280,7 +257,7 @@
 
 
                             <div class="card-action">
-                                <h5 style="color: inherit"> ' . $percentage . ' % <h5>
+                                <h5 style="color: inherit"> ' . $percentage . ' % </h5>
 
                                 <div class="container progress grey darken-4">
                                     <div class="determinate white" style="width: ' . $percentage . '%"></div>
@@ -290,7 +267,7 @@
                             <br>
 
                         </div>
-                    </div>
+                
                 </a>
             </div>
         ';

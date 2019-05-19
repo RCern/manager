@@ -71,4 +71,38 @@ var table = new Tabulator("#teams", {
 });
 
 
+var table2 = new Tabulator("#teamsEmployees", {
+    //height:"311px",
+    layout:"fitColumns",
+    ajaxURL:"getTabsTE.php", //ajax URL
+    ajaxConfig:"POST", //ajax HTTP request type
+    ajaxContentType:"json", // send parameters to the server as a JSON encoded string
+    paginationSize:20,
+    groupBy:["Tname","Pname"],
+        columns:[
+        {title:"Team Name", field:"Tname", sorter:"string"},
+        {title: "Projects", field:"Pname", sorter:"string"},
+        {title: "Employees", field:"Ename", sorter:"string"},
+        
+    ], 
+    cellEdited:function(cell){
+        var data = JSON.stringify(cell.getData());
+               
+
+        $.ajax({
+        type:'POST',
+        url:'updateTabsTE.php',
+        
+        data: { obj:data},
+        success:function(response){
+         
+        }
+    });
+
+        
+    
+}
+});
+
+
 
