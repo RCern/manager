@@ -13,11 +13,11 @@
         </div>
     </li>
 
-    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">      <i class="material-icons left">account_circle </i>My Profile</a></li>
-    <li><a class="blueLightToBlueDeep smallZoom" href="projectNew.php">   <i class="material-icons left">add_to_photos  </i>New Project</a></li>
-    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">      <i class="material-icons left">delete_sweep   </i>Delete Project</a></li>
-    <li><a class="blueLightToBlueDeep smallZoom" href="employees.php">    <i class="material-icons left">face           </i>Employees</a></li>
-    <li><a class="blueLightToBlueDeep smallZoom" href="backpageTeams.php"><i class="material-icons left">groups         </i>Teams</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">           <i class="material-icons left">account_circle </i>My Profile</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="projectNew.php">        <i class="material-icons left">add_to_photos  </i>New Project</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="account.php">           <i class="material-icons left">delete_sweep   </i>Delete Project</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="backpageEmployees.php"> <i class="material-icons left">face           </i>Employees</a></li>
+    <li><a class="blueLightToBlueDeep smallZoom" href="backpageTeams.php">     <i class="material-icons left">groups         </i>Teams</a></li>
     
     <li>
         <form>
