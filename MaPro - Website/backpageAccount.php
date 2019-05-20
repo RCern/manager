@@ -99,7 +99,6 @@
             <div class="container">
                 <div id="tabs">
                     <?php addProjectCardsEmployee($_SESSION["ID"]); ?>
-                    <?php addProjectCardsFake(15); ?>
                 </div>
             </div>
 

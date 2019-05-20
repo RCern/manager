@@ -2,6 +2,10 @@
     // On démarre la session AVANT d'écrire du code HTML
     session_start();
     
+
+    include "connectdb.php";
+
+    
     // Name of the logged in client
     $_SESSION['leader'] = "Jean Michel POKER";
     $_SESSION['percentage'] = rand(1, 100);
@@ -24,7 +28,7 @@
   </style>
 
 
-  <title>MaPro - Project n° <?php echo $_GET['ID']; ?> </title>
+  <title>MaPro - Project : <?php echo getProjectValue($_GET['ID'], "name"); ?> </title>
 
 
     <head>
@@ -60,8 +64,7 @@
 
         <div class="container">
 
-            <h1 class="center">Bienvenue sur la page du projet n°  <?php echo $_GET['ID']; ?> !</h1>
-            <h1 class="center blueDeep"><?php echo $_SESSION['title']; ?></h1>
+            <h1 class="center blueDeep"><?php echo getProjectValue($_GET['ID'], "name"); ?></h1>
 
             <div class="row" style="vertical-align: middle">
                 <div class="progress col s8">

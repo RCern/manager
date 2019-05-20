@@ -1,4 +1,7 @@
-<?php include "connectdb.php"; ?>
+<?php
+    session_start();
+    include "connectdb.php";
+?>
 
 
 <html lang="en">

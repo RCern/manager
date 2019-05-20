@@ -144,10 +144,7 @@ function listShow()
                 url:'updateTabs.php',
                 
                 data: { obj:data},
-                success:function(response)
-                {
-                
-                }
+                success:function(response) {}
             }); 
         }
     });

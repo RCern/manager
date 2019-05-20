@@ -59,7 +59,7 @@
 
                         <div class="col s9 center" style="font-family: Comfortaa">
                             <h1 class="blueDeep"> ' . $nom . ' </h1>
-                            <h3 class="blueLight"> Cowabunga </h3>
+                            <h3 class="blueLight"> ID : ' . $teamID . ' </h3>
                             <br>
                             <h5 class="black-text"> ' . $description . ' </h5>
                         </div>

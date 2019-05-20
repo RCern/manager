@@ -72,4 +72,34 @@
         // Return the found value
         return $return;
     } 
+
+    
+
+
+    function getProjectValue($ID, $value)
+    {
+        // We initialize the return value
+        $return = "";
+
+
+        // We search in the database the data of the employee whose ID has been given by argument
+        $conn = connect();
+        $sql = "SELECT  " . $value . " from project WHERE projectID = '$ID'";
+
+        $result = $conn->query($sql);
+        
+        if($result->num_rows == 1)
+        {
+            $row = $result->fetch_assoc();
+            $return =  $row["" . $value . ""];
+        }
+        
+
+        // Connection Closed.
+        $conn->close();
+        
+        
+        // Return the found value
+        return $return;
+    } 
 ?>
